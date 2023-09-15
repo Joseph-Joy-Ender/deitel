@@ -1,6 +1,6 @@
 package chapter1;
 
-import chapter4.Nokia3310Phone;
+import chibuzorAssignment.Nokia3310Phone;
 
 import java.util.Scanner;
 

@@ -25,23 +25,12 @@ public class LetterGrade {
             total += grade;
             ++gradeCounter;
 
-            switch (grade / 10){
-                case 9:
-                case 10:
-                    ++aCount;
-                    break;
-                case 8:
-                    ++bCount;
-                    break;
-                case 7:
-                    ++cCount;
-                    break;
-                case 6:
-                    ++dCount;
-                    break;
-                default:
-                    ++fCount;
-                    break;
+            switch (grade / 10) {
+                case 9, 10 -> ++aCount;
+                case 8 -> ++bCount;
+                case 7 -> ++cCount;
+                case 6 -> ++dCount;
+                default -> ++fCount;
             }
         }
 

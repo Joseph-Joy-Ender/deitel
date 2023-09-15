@@ -1,6 +1,6 @@
 package tdd;
 
-import chapter4.CreditLimitCalculator;
+import tdd.CreditLimitCalculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,8 +28,8 @@ public class CreditLimitCalculatorTest {
     }
     @Test
     void testThatCreditLimitCalculatorHasTotalOfAllItems(){
-        creditLimitCalculator.setTotalItems(20);
-        assertEquals(20, creditLimitCalculator.getTotalItems());
+        creditLimitCalculator.setTotalItems(-6);
+        assertEquals(0, creditLimitCalculator.getTotalItems());
 
     }
     @Test
@@ -70,4 +70,6 @@ public class CreditLimitCalculatorTest {
         creditLimitCalculator.setTotalOfCredits(51000);
         assertEquals(-980, creditLimitCalculator.calculateNewBalance());
     }
+
+
 }

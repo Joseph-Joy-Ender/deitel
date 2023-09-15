@@ -1,6 +1,5 @@
 package tdd;
 
-import chapter4dietelExercise.TaxCalculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

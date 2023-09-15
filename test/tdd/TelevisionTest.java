@@ -1,6 +1,6 @@
 package tdd;
 
-import chapter4.Television;
+import tdd.Television;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

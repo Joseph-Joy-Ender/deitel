@@ -10,7 +10,7 @@ public class ReverseNumber {
 
         int reverse = 0;
         int temp = number;
-        int remainder = 0;
+        int remainder;
 
         while (temp > 0){
             remainder = temp % 10;

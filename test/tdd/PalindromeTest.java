@@ -1,6 +1,6 @@
 package tdd;
 
-import chapter4.Palindrome;
+import tdd.Palindrome;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
