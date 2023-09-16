@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Switch {
     private static double amount;
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         menu();
         int node = scanner.nextInt();
@@ -99,4 +99,5 @@ public class Switch {
     private static void display(String input){
         System.out.println(input);
     }
+
 }
