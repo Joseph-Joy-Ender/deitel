@@ -33,16 +33,20 @@ public class CreditLimitsCalculatorSwitchMethod {
 
     private static void totalOfAllItems() {
         Scanner input = new Scanner(System.in);
+      //  double totalOfAllItems = input.nextDouble();
         display("Enter total of all items charged by customer -> ");
-        input.nextInt();
+        input.nextDouble();
 
+      //  return totalOfAllItems;
         }
 
 
     private static void totalOfAllCreditsAppliedToCustomersAccount() {
+        display("Enter total of all credits applied to customer -> ");
     }
 
     private static void creditLimit() {
+        display("Enter credit limit -> ");
     }
 
     private static void newBalance() {
