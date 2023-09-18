@@ -85,10 +85,10 @@ public class Switch {
             display("Withdrawal successful");
             display("Debit: " + withdrawalAmount);
             double balance = accountBalance - withdrawalAmount;
-            display("Balance: " + String.valueOf(balance));
+            display("Balance: " + (balance));
         } else {
             display("insufficient funds");
-            display("Your account balance: " + String.valueOf(accountBalance));
+            display("Your account balance: " + (accountBalance));
         }
         System.out.println();
         menu();

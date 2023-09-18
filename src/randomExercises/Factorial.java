@@ -18,13 +18,5 @@ public class Factorial {
         }
         System.out.println(total);
 
-
-//      int sum = 0;
-//        for (int i = 1; i <= number ; i++) {
-//            sum = sum + i;
-//        }
-//        System.out.println(sum);
-//
-//    }
     }
 }

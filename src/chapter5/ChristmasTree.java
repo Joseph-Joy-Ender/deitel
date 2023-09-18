@@ -1,5 +1,7 @@
 package chapter5;
 
+import java.util.Scanner;
+
 public class ChristmasTree {
 
 
@@ -7,7 +9,6 @@ public class ChristmasTree {
         for (int i = 0; i < 6; i++) {
             for (int space = i; space <= 8 ; space++) {
                 System.out.print(" ");
-
             }
             for (int j = 0; j <= 6; j++) {
                 System.out.print("* ");
@@ -29,7 +30,6 @@ public class ChristmasTree {
             }
 
         }
-
 
 
     public static void main(String[] args) {
