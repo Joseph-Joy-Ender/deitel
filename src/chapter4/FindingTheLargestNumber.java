@@ -6,9 +6,8 @@ public class FindingTheLargestNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter ten integers: ");
-        int number = scanner.nextInt();
 
-        int largestNumber = number;
+        int largestNumber = scanner.nextInt();
 
         for (int count = 1; count <= 10; count++) {
             System.out.println("Enter ten integers: ");

@@ -2,6 +2,8 @@ package chapter4;
 
 import java.util.Scanner;
 
+import static chibuzorAssignment.MathematicsAssignments.factorial;
+
 public class FactorialC {
 
     public static void main(String[] args) {
@@ -18,13 +20,5 @@ public class FactorialC {
         }
         System.out.println(e);
     }
-    private static int factorial(int input){
-        int sum = 1;
-        if (input <= 1) return 1;
-        for (int count = input; count >= 1 ; count--) {
-            sum *= count;
-
-        }
-        return sum;
     }
-}
+

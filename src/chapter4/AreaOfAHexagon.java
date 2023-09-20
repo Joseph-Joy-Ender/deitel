@@ -8,8 +8,8 @@ public class AreaOfAHexagon {
         System.out.println("Enter the side of a hexagon: ");
         double side = scanner.nextDouble();
 
-        double area = (6 * Math.sqrt(side)) / 4 * Math.tan(Math.PI/ 6);
+        double area = (6 * side * side) / (4 * (Math.tan(Math.PI/ 6)));
 
-        System.out.println("The area of a hexagon is " + area);
+        System.out.printf("The area of a hexagon is %.2f ", area);
     }
 }
