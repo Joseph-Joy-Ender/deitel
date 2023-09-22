@@ -1,6 +1,6 @@
 package chapter4;
 
-public class MultiplicationTable {
+public class MultiplyingNumber {
 
 
     public static int multiply(int number1, int number2){

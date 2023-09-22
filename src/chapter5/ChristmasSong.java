@@ -1,6 +1,6 @@
 package chapter5;
 
-public class ChristmasSong {
+public class   ChristmasSong {
     public static void main(String[] args) {
         for (int days = 1; days <= 12; days++) {
             switch (days){

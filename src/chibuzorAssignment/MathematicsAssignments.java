@@ -32,13 +32,11 @@ public class MathematicsAssignments {
     }
 
     public static int subtract(int number1, int number2){
-        return myAbs(number1 - number2);
+       // return myAbs(number1 - number2);
+        return Math.abs(number1 - number2);
     }
 
-    public static int myAbs(int value){
-        if (value < 0) return -(value);
-        return value;
-    }
+
 
     public static boolean isPrimeNumber(int number){
         if(number == 1) {

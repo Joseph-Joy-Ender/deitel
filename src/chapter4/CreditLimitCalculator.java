@@ -50,16 +50,12 @@ public class CreditLimitCalculator {
         this.creditLimit = creditLimit;
     }
 
-    public void setNewBalance(int newBalance) {
-        this.newBalance = newBalance;
-    }
-
     public int calculateNewBalance(){
         newBalance = getBeginningBalance() + getTotalItems() - getTotalOfCredits();
         displayMessage(newBalance);
         return newBalance;
     }
-    private   void displayMessage(int newBalance){
+    private void displayMessage(int newBalance){
         if (newBalance > getCreditLimit()) System.out.println("Credit limit exceeded");
     }
 }

@@ -2,7 +2,7 @@ package chapter4;
 
 import java.util.Scanner;
 
-import static chibuzorAssignment.MathematicsAssignments.factorial;
+import static chapter4.FactorialB.factorial;
 
 public class FactorialC {
 

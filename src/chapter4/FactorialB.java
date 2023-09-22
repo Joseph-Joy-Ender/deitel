@@ -15,7 +15,7 @@ public class   FactorialB {
         System.out.println(e);
 
     }
-    private static int factorial(int input){
+    public static int factorial(int input){
         if (input <= 1) return 1;
         int sum = 1;
         for (int count = input; count >= 1 ; count--) {
