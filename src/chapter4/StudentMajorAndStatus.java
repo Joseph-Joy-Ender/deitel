@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class StudentMajorAndStatus {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter major: ");
+        System.out.print("Enter major: ");
         String major = scanner.next();
-        System.out.println("Enter a number character: ");
+        System.out.print("Enter a number character: ");
         int number = scanner.nextInt();
 
-        for (int i = number; i <= 4 ; i++) {
+        for (int i = number; i <= number ; i++) {
 
             switch (major) {
                 case "M" -> input("Mathematics");

@@ -36,7 +36,6 @@ public class Dogs {
         System.out.println("The dog is " + dog.getAge() + " Year old");
         System.out.println("Size of dog is " + dog.getSize());
 
-
     }
 
 }

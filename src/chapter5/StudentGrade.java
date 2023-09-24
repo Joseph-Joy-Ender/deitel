@@ -10,26 +10,32 @@ public class StudentGrade {
         int cCounter = 0;
         int dCounter = 0;
 
-        for (int count = 1; count <= 5; count++) {
-            System.out.println("Enter your grade: ");
-            String grade = scanner.nextLine();
 
-            switch (grade) {
-                case "1" -> aCounter++;
-                case "2" -> bCounter++;
-                case "3" -> cCounter++;
-                case "4" -> dCounter++;
+
+            for (int count = 1; count <= 5; count++) {
+                System.out.println("Enter your name: ");
+                String name = scanner.nextLine();
+                System.out.println("Enter your grade: ");
+                String grade = scanner.nextLine();
+
+                switch (grade) {
+                    case "A" -> aCounter++;
+                    case "B" -> bCounter++;
+                    case "C" -> cCounter++;
+                    case "D" -> dCounter++;
+
+                }
+
+                System.out.println("Name of student is " + name + " \n" + "Grade is " + grade);
+            }
+                System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d",
+                        "Result of student grade:",
+                        "A: ", aCounter,
+                        "B: ", bCounter,
+                        "C: ", cCounter,
+                        "D: ", dCounter
+                );
 
             }
-
         }
-            System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d",
-                    "Result of student grade:",
-                    "A: ", aCounter,
-                    "B: ", bCounter,
-                    "C: ", cCounter,
-                    "D: ", dCounter
 
-            );
-        }
-    }
