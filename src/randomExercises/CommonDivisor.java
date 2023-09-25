@@ -11,7 +11,7 @@ public class CommonDivisor {
 
             int gcd = 1;
         for (int i = 1; i <= number1 && i <= number2; i++) {
-            if(number1%i==0 && number2%i==0){
+            if(number1 % i == 0 && number2 % i == 0){
                 gcd = i;
             }
         }
@@ -22,7 +22,7 @@ public class CommonDivisor {
         int number3 = 4;
       // int gcd = 1;
         for (int i = 1; i <= number && i <= number3 ; i++) {
-            if (number%i==0 && number3%i==0){
+            if (number % i == 0 && number3 % i == 0){
                  gcd = i;
             }
         }
