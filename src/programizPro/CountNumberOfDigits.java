@@ -8,12 +8,14 @@ public class CountNumberOfDigits {
 
         System.out.println("Enter a number: ");
         int number = scanner.nextInt();
+        int sum = 0;
         int count = 0;
         for (int i = 0; i <= number ; i++) {
-            int sum = number % 10;
+             sum = number % 10;
             count += 1;
-            System.out.println(sum);
+           // System.out.println(sum);
         }
+        System.out.println(sum);
         System.out.println(count);
 
     }
