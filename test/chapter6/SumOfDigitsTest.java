@@ -21,12 +21,18 @@ class SumOfDigitsTest {
     @Test
     public void testThatNegativeNumberCannotBeSummed(){
         int digits = -2131;
-        assertEquals(-7, SumOfDigits.sumOfDigits(digits));
+        assertEquals(7, SumOfDigits.sumOfDigits(digits));
     }
 
     @Test
     public void testThatTheSumOf1234Is10(){
-        int digits = 1234;
-        assertEquals(10, SumOfDigits.sumOfDigits(digits));
+        int digits = 1234567;
+        assertEquals(28, SumOfDigits.sumOfDigits(digits));
+    }
+
+    @Test
+    public void testThatTheSumOf123Is9(){
+        int digits = 234;
+        assertEquals(9, SumOfDigits.sumOfDigits(digits));
     }
 }

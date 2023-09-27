@@ -7,8 +7,6 @@ public class SumOfDigits {
         int sum = 0;
         int digits;
 
-       // if (numbers < 4) System.out.println("Number must be four-digits long");
-
         while (number != 0) {
 
                 digits = number % 10;
@@ -18,6 +16,6 @@ public class SumOfDigits {
 
             }
 
-        return sum;
+        return Math.abs(sum);
     }
 }
