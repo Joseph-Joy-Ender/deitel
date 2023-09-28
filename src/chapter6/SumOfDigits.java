@@ -16,6 +16,6 @@ public class SumOfDigits {
 
             }
 
-        return Math.abs(sum);
+        return sum;
     }
 }

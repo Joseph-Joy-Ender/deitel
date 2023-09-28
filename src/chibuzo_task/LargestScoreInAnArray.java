@@ -17,6 +17,7 @@ public class LargestScoreInAnArray {
             if (score > largestScore) largestScore = score;
             scores[i] = score;
         }
+
         System.out.println(Arrays.toString(scores));
         System.out.println("The largest scores is " + largestScore);
     }

@@ -21,7 +21,7 @@ class SumOfDigitsTest {
     @Test
     public void testThatNegativeNumberCannotBeSummed(){
         int digits = -2131;
-        assertEquals(7, SumOfDigits.sumOfDigits(digits));
+        assertEquals(-7, SumOfDigits.sumOfDigits(digits));
     }
 
     @Test
