@@ -5,18 +5,16 @@ import java.util.Scanner;
 public class SumOfArrayElements {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int sum = 0;
 
-        int[] numbers = new int[5];
+        int[] numbers = {55, 64, 75, 80, 65};
+        int smallest = numbers[3];
 
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Enter an array element: ");
-            numbers[i] = scanner.nextInt();
-        }
+            if (smallest > numbers[i]){
+                smallest = numbers[i];
+            }
 
-        for (int number : numbers) {
-            sum += number;
         }
-        System.out.println("Sum: " + sum);
+        System.out.println(smallest);
     }
 }
