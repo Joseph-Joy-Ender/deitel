@@ -24,8 +24,7 @@ public class TwoNumbersDoWhileLoop {
             String answer = scanner.next();
             scanner.nextLine();
 
-            if (Objects.equals(answer, "yes")) con = true;
-            else con = false;
+            con = Objects.equals(answer, "yes");
         }
             while (con);
 

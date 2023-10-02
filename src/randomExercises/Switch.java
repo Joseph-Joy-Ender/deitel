@@ -47,7 +47,7 @@ public class Switch {
     private static void transfer() {
         Scanner input = new Scanner(System.in);
         display("Enter Recipient Account Number -> ");
-        input.nextDouble();
+        input.nextLine();
         display("""
                 press
                 1 -> UBA
@@ -103,7 +103,7 @@ public class Switch {
         display("Enter bank name: ");
         input.nextLine();
         display("Enter account number: ");
-        input.nextDouble();
+        input.nextLine();
         display("Enter amount: ");
         input.nextDouble();
         display("Deposit was successful");

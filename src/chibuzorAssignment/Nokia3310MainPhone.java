@@ -1,16 +1,14 @@
-package chapter1;
-
-import chibuzorAssignment.Nokia3310Phone;
+package chibuzorAssignment;
 
 import java.util.Scanner;
 
-public class Phones {
+public class Nokia3310MainPhone {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
 
         Nokia3310Phone phone = new Nokia3310Phone();
-        phone.menu();
+        Nokia3310Phone.menu();
         int map = scanner.nextInt();
         phone.mainMenu(map);
     }

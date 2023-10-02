@@ -1,10 +1,19 @@
-package chibuzorAssignment;
+package chibuzo_task;
 
 import java.util.Scanner;
 
-public class Nokia3310Phone {
+public class NokiaPhone {
 
-    public void mainMenu(int map) {
+    public static void main(String[] args) {
+        userPrompt();
+
+
+    }
+
+    public static void userPrompt() {
+        Scanner userInput = new Scanner(System.in);
+        menu();
+        int map = userInput.nextInt();
         switch (map) {
             case 1 -> phoneBook();
             case 2 -> messages();
@@ -19,8 +28,16 @@ public class Nokia3310Phone {
             case 11 -> clock();
             case 12 -> profiles();
             case 13 -> simServices();
+            case 14 -> endProgram();
         }
     }
+
+    public static void endProgram() {
+        mobile("Good Bye!");
+        System.exit(0);
+
+    }
+
     public static void menu() {
         String menu = """
                 ============================
@@ -39,19 +56,21 @@ public class Nokia3310Phone {
                 11 -> clock();
                 12 -> profiles();
                 13 -> simServices();
+                14 -> exit;
                 **************************
                 Your Nokia Menu Map
                 ==========================
                 """;
-                mobile(menu);
+        mobile(menu);
     }
+
     private static void phoneBook() {
         Scanner input = new Scanner(System.in);
         mobile("PhoneBook");
         mobile("""
                 press
                 1 -> Search
-                2 -> Service Nos
+                2 -> Service Nos±
                 3 -> Add Name
                 4 -> Erase
                 5 -> Edit
@@ -60,6 +79,8 @@ public class Nokia3310Phone {
                 8 -> Options
                 9 -> Speed dials
                 10 -> Voice tags
+                11 -> Back
+                12 -> exit
                 """);
         int phone = input.nextInt();
         switch (phone) {
@@ -75,15 +96,24 @@ public class Nokia3310Phone {
                 mobile("""
                         1.Type of view
                         2.Memory Status
+                        3.Back
+                        4.Exit
                         """);
+                int option = input.nextInt();
+                switch (option) {
+                    case 1 -> mobile("Type of view");
+                    case 2 -> mobile("Memory status");
+                    case 3 -> phoneBook();
+                    case 4 -> endProgram();
+                }
             }
             case 9 -> mobile("Speed dials");
             case 10 -> mobile("Voice tags");
+            case 11 -> userPrompt();
+            case 12 -> endProgram();
         }
 
-        menu();
-            }
-
+    }
 
 
     private static void messages() {
@@ -101,6 +131,8 @@ public class Nokia3310Phone {
                 8 -> Info Service
                 9 -> Voice MailBox Number
                 10 -> Service Command Editor
+                11 -> Back
+                12 -> exit
                 """);
         int messages = input.nextInt();
         switch (messages) {
@@ -111,28 +143,75 @@ public class Nokia3310Phone {
             case 5 -> mobile("Templates");
             case 6 -> mobile("Smileys");
             case 7 -> {
-                mobile("Message settings");
-                mobile("""
-                        1. Set 1
-                         1. Message centre number
-                         2. Message sent as
-                         3. Message validity
-                        """);
+                messageSetting();
+            }
+            case 8 -> mobile("Info services");
+            case 9 -> mobile("Voice MailBox Number");
+            case 10 -> mobile("Service Command Editor");
+            case 11 -> userPrompt();
+            case 12 -> endProgram();
+        }
+    }
 
+    private static void messageSetting() {
+        Scanner input = new Scanner(System.in);
+        mobile("Message settings");
+
+        mobile("""
+                1. Set 1²
+                2. Common³
+                3. Back
+                4. exit
+                """);
+
+        int messagesSettings = input.nextInt();
+
+        switch (messagesSettings) {
+            case 1 -> {
+                mobile("Set 1²");
                 mobile("""
-                        2. Common
+                        1. Message centre number
+                        2. Message sent as
+                        3. Message validity
+                        4. Back
+                        5. exit
+                        """);
+                int set1 = input.nextInt();
+                switch (set1) {
+                    case 1 -> mobile("Message centre number");
+                    case 2 -> mobile("Message sent as");
+                    case 3 -> mobile("Message validity");
+                    case 4 -> messageSetting();
+                    case 5 -> endProgram();
+
+                }
+
+            }
+            case 2 -> {
+                mobile("Common³");
+                mobile("""
                          1. Delivery reports
                          2. Reply via same centre
                          3. Character support
+                         4. Back
+                         5. exit
                         """);
+                int common = input.nextInt();
+                switch (common) {
+                    case 1 -> mobile("Delivery reports");
+                    case 2 -> mobile("Reply via same centre");
+                    case 3 -> mobile("Character support");
+                    case 4 -> messageSetting();
+                    case 5 -> endProgram();
+
+                }
             }
-                case 8 -> mobile("Info services");
-                case 9 -> mobile("Voice MailBox Number");
-                case 10 -> mobile("Service Command Editor");
-            }
+            case 3 -> messages();
+            case 4 -> endProgram();
+
         }
 
-
+    }
 
     private static void callRegister() {
         Scanner input = new Scanner(System.in);
@@ -146,6 +225,7 @@ public class Nokia3310Phone {
                 6 -> Show call costs
                 7 -> Call cost settings
                 8 -> Prepaid credit
+                9 -> Back
                 """);
         int callRegister = input.nextInt();
         switch (callRegister) {
@@ -161,7 +241,19 @@ public class Nokia3310Phone {
                         3: Received calls duration
                         4: Dialled call's duration
                         5: Clear timers
+                        6: Back
+                        7. Exit
                         """);
+                int callDuration = input.nextInt();
+                switch (callDuration) {
+                    case 1 -> mobile("Last call duration");
+                    case 2 -> mobile("All calls duration");
+                    case 3 -> mobile("Received calls duration");
+                    case 4 -> mobile("Dialled call's duration");
+                    case 5 -> mobile("Clear timers");
+                    case 6 -> callRegister();
+                    case 7 -> endProgram();
+                }
             }
             case 6 -> {
                 mobile("Last call ");
@@ -178,6 +270,7 @@ public class Nokia3310Phone {
                         """);
             }
             case 8 -> mobile("Prepaid credit");
+            case 9 -> userPrompt();
         }
     }
 
@@ -194,6 +287,7 @@ public class Nokia3310Phone {
                 7 -> warning and game tones
                 8 -> Vibrating alert
                 9 -> Screen saver
+                10 -> Back
                 """);
         int tones = input.nextInt();
         switch (tones) {
@@ -206,6 +300,7 @@ public class Nokia3310Phone {
             case 7 -> mobile("warning and game tones");
             case 8 -> mobile("Vibrating alert");
             case 9 -> mobile("Screen saver");
+            case 10 -> userPrompt();
         }
     }
 
@@ -217,6 +312,7 @@ public class Nokia3310Phone {
                 2 -> Phone settings
                 3 -> Security settings
                 4 -> Restore factory settings
+                5 -> Back
                 """);
         int setting = input.nextInt();
         switch (setting) {
@@ -228,8 +324,10 @@ public class Nokia3310Phone {
                         3. Call waiting options
                         4. Own number sending
                         5. Phone line in use
-                        6. Automatic answer
+                        6. Automatic answer±
+                        7. Back
                         """);
+
             }
             case 2 -> {
                 mobile("Phone settings");
@@ -240,6 +338,7 @@ public class Nokia3310Phone {
                         4. Network selection
                         5. Lights
                         6.confirm SIM service actions
+                        7. Back
                         """);
             }
             case 3 -> {
@@ -251,9 +350,11 @@ public class Nokia3310Phone {
                         4. Closed user group
                         5.Phone security
                         6. Change access codes
+                        7. Back
                         """);
             }
             case 4 -> mobile("Restore factory setting");
+            case 5 -> userPrompt();
         }
     }
 
@@ -267,6 +368,7 @@ public class Nokia3310Phone {
                 4. StopWatch
                 5. Countdown timer
                 6. Auto update of date and time
+                7. Back
                 """);
         int clock = input.nextInt();
         switch (clock) {
@@ -275,8 +377,9 @@ public class Nokia3310Phone {
             case 3 -> mobile("Date setting");
             case 5 -> mobile("StopWatch");
             case 6 -> mobile("Auto update of date and time");
+            case 7 -> userPrompt();
         }
-        }
+    }
 
     private static void calculator() {
         mobile("Calculator");
@@ -284,7 +387,7 @@ public class Nokia3310Phone {
     }
 
     private static void simServices() {
-        mobile("SIM services");
+        mobile("SIM services³");
     }
 
     private static void profiles() {
@@ -307,7 +410,9 @@ public class Nokia3310Phone {
         mobile("Chat");
     }
 
+
     private static void mobile(String input) {
         System.out.println(input);
     }
 }
+
