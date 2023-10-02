@@ -260,14 +260,33 @@ public class NokiaPhone {
                 mobile("""
                         1: All calls cost
                         2: Clear timer
+                        3: Back
+                        4: Exit
                         """);
+                int lastCall = input.nextInt();
+                switch (lastCall){
+                    case 1 -> mobile("All calls cost");
+                    case 2 -> mobile("Clear timer");
+                    case 3 -> callRegister();
+                    case 4 -> endProgram();
+
+                }
             }
             case 7 -> {
                 mobile("Call cost settings");
                 mobile("""
                          1: Call cost limit
                          2: Show costs in
+                         3: Back
+                         4: Exit
                         """);
+                int callCost = input.nextInt();
+                switch (callCost){
+                    case 1 -> mobile("Call cost limit");
+                    case 2 -> mobile("Show costs in");
+                    case 3 -> callRegister();
+                    case 4 -> endProgram();
+                }
             }
             case 8 -> mobile("Prepaid credit");
             case 9 -> userPrompt();
@@ -326,7 +345,19 @@ public class NokiaPhone {
                         5. Phone line in use
                         6. Automatic answer±
                         7. Back
+                        8. Exit
                         """);
+                int settings = input.nextInt();
+                switch (settings){
+                    case 1 -> mobile("Automatic redial");
+                    case 2 -> mobile("Speed dialling");
+                    case 3 -> mobile("Call waiting options");
+                    case 4 -> mobile("Own number sending");
+                    case 5 -> mobile("Phone line in use");
+                    case 6 -> mobile("Automatic answers");
+                    case 7 -> settings();
+                    case 8 -> endProgram();
+                }
 
             }
             case 2 -> {
@@ -339,7 +370,15 @@ public class NokiaPhone {
                         5. Lights
                         6.confirm SIM service actions
                         7. Back
+                        8. Exit
                         """);
+                int phoneSettings = input.nextInt();
+                switch (phoneSettings){
+                    case 1 -> mobile("Language");
+                    case 2 -> mobile("Call info display");
+                    case 3 -> mobile("Welcome note");
+                    case 4 -> mobile("Network selection");
+                }
             }
             case 3 -> {
                 mobile("Security settings");
