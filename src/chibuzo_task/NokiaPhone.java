@@ -226,6 +226,7 @@ public class NokiaPhone {
                 7 -> Call cost settings
                 8 -> Prepaid credit
                 9 -> Back
+                10 -> Exit
                 """);
         int callRegister = input.nextInt();
         switch (callRegister) {
@@ -290,6 +291,7 @@ public class NokiaPhone {
             }
             case 8 -> mobile("Prepaid credit");
             case 9 -> userPrompt();
+            case 10 -> endProgram();
         }
     }
 
@@ -307,6 +309,7 @@ public class NokiaPhone {
                 8 -> Vibrating alert
                 9 -> Screen saver
                 10 -> Back
+                11. Exit
                 """);
         int tones = input.nextInt();
         switch (tones) {
@@ -320,6 +323,7 @@ public class NokiaPhone {
             case 8 -> mobile("Vibrating alert");
             case 9 -> mobile("Screen saver");
             case 10 -> userPrompt();
+            case 11 -> endProgram();
         }
     }
 
@@ -332,6 +336,7 @@ public class NokiaPhone {
                 3 -> Security settings
                 4 -> Restore factory settings
                 5 -> Back
+                5 -> exit
                 """);
         int setting = input.nextInt();
         switch (setting) {
@@ -368,7 +373,7 @@ public class NokiaPhone {
                         3. Welcome note
                         4. Network selection
                         5. Lights
-                        6.confirm SIM service actions
+                        6. confirm SIM service actions
                         7. Back
                         8. Exit
                         """);
@@ -387,13 +392,26 @@ public class NokiaPhone {
                         2. Call barring service
                         3. Fixed dialling
                         4. Closed user group
-                        5.Phone security
+                        5. Phone security
                         6. Change access codes
                         7. Back
+                        8. Exit
                         """);
+                int securitySetting = input.nextInt();
+                switch (securitySetting){
+                    case 1 -> mobile("PIN code request");
+                    case 2 -> mobile("Call barring service");
+                    case 3 -> mobile("Fixed dialling");
+                    case 4 -> mobile("Closed user group");
+                    case 5 -> mobile("Phone setting");
+                    case 6 -> mobile("Change access code");
+                    case 7 -> settings();
+                    case 8 -> endProgram();
+                }
             }
             case 4 -> mobile("Restore factory setting");
             case 5 -> userPrompt();
+            case 6 -> endProgram();
         }
     }
 
@@ -408,6 +426,7 @@ public class NokiaPhone {
                 5. Countdown timer
                 6. Auto update of date and time
                 7. Back
+                8. Exit
                 """);
         int clock = input.nextInt();
         switch (clock) {
@@ -417,6 +436,7 @@ public class NokiaPhone {
             case 5 -> mobile("StopWatch");
             case 6 -> mobile("Auto update of date and time");
             case 7 -> userPrompt();
+            case 8 -> endProgram();
         }
     }
 
