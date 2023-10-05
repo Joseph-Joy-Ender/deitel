@@ -23,11 +23,11 @@ public class StringsMethods {
 //        System.out.println("Enter gender: ");
 //        char gender = scanner.next().charAt(0);
 
-//        JOptionPane.showMessageDialog(null, "Welcome To Semicolon Village");
-//        String name;
-//        name = JOptionPane.showInputDialog("What is your name? ");
-//
-//        JOptionPane.showMessageDialog(null, "Hello " + name);
+        JOptionPane.showMessageDialog(null, "Welcome To Semicolon Village");
+        String name;
+        name = JOptionPane.showInputDialog("What is your name? ");
+
+        JOptionPane.showMessageDialog(null, "Hello " + name);
 
         int iVar = Integer.parseInt("259");
         double dVar = Double.parseDouble("794.6");

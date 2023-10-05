@@ -6,7 +6,7 @@ public class CreditLimitCalculator {
     private int totalItems;
     private int totalOfCredits;
     private int creditLimit;
-    private int newBalance;
+
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -51,7 +51,7 @@ public class CreditLimitCalculator {
     }
 
     public int calculateNewBalance(){
-        newBalance = getBeginningBalance() + getTotalItems() - getTotalOfCredits();
+        int newBalance = getBeginningBalance() + getTotalItems() - getTotalOfCredits();
         displayMessage(newBalance);
         return newBalance;
     }

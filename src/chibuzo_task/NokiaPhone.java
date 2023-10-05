@@ -7,12 +7,12 @@ public class NokiaPhone {
     public static void main(String[] args) {
         userPrompt();
 
-
     }
 
     public static void userPrompt() {
         Scanner userInput = new Scanner(System.in);
         menu();
+        errorMessage();
         int map = userInput.nextInt();
         switch (map) {
             case 1 -> phoneBook();
@@ -472,6 +472,20 @@ public class NokiaPhone {
 
     private static void mobile(String input) {
         System.out.println(input);
+    }
+    private static void input(String display){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(display);
+    }
+
+    private static int errorMessage(){
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        if (input < 1 || input > 14){
+            throw new RuntimeException("Enter a number between 1 and 14");
+        }
+        return input;
+//        userPrompt();
     }
 }
 

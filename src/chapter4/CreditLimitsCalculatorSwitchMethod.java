@@ -1,13 +1,22 @@
 package chapter4;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class CreditLimitsCalculatorSwitchMethod {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("""
+                1. account number
+                2. beginningBalance
+                3. totalOfAllItems
+                4. totalOfAllCreditsAppliedToCustomersAccount
+                5. creditLimit
+                6. newBalance
+                """);
 
+        accountNumber();
         int node = scanner.nextInt();
-
         switch (node){
           case 1 -> accountNumber();
           case 2 -> beginningBalance();
@@ -21,6 +30,8 @@ public class CreditLimitsCalculatorSwitchMethod {
 
     private static void accountNumber() {
         Scanner input = new Scanner(System.in);
+        JOptionPane.showInputDialog("Enter account number");
+        JOptionPane.showMessageDialog(null,"Enter beginning balance");
         display("Enter account number -> ");
         input.nextInt();
     }

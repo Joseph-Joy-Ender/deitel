@@ -2,9 +2,9 @@ package chapter3;
 
 public class Clock {
 
-    private int hour;
-    private int minute;
-    private int second;
+    private final int hour;
+    private final int minute;
+    private final int second;
 
 
 

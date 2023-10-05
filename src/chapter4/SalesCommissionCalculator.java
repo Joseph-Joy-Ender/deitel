@@ -2,21 +2,15 @@ package chapter4;
 
 public class SalesCommissionCalculator {
 
-    private final int SALARY = 200;
-    private final double PERCENTAGE = 0.09;
-
     private double priceForItemSold;
-    private double calculateCommission;
-
-    private double totalWages;
 
 
     public int getSALARY(){
-        return SALARY;
+        return 200;
     }
 
     public double getPERCENTAGE() {
-        return PERCENTAGE;
+        return 0.09;
     }
 
     public void setPriceForItemSold(double priceForItemSold) {
@@ -30,13 +24,11 @@ public class SalesCommissionCalculator {
     }
 
     public double calculateCommission() {
-         calculateCommission = getPERCENTAGE() * getPriceForItemSold();
-        return calculateCommission;
+        return getPERCENTAGE() * getPriceForItemSold();
     }
 
 
     public double calculateTotalWage() {
-        totalWages = calculateCommission() + getSALARY();
-        return totalWages;
+        return calculateCommission() + getSALARY();
     }
 }

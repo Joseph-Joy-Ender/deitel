@@ -48,18 +48,13 @@ public class Petrol {
         return quantity;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
     public double getDiscount() {
         return discount;
     }
 
     public  double getPurchasedAmount(){
-        double netPurchase = (quantity * price) - discount;
-       double netPurchasedAmount = netPurchase;
-       return netPurchasedAmount;
+        return (quantity * price) - discount;
     }
 
     public static void main(String[] args) {
