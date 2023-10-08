@@ -5,8 +5,8 @@ public class StandardDeviation {
 
     public static int calculateSD(int[] numbers){
         double sum = 0.0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+        for (int number : numbers) {
+            sum += number;
 
         }
         double mean = sum / numbers.length;

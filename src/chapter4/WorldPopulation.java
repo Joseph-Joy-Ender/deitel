@@ -13,7 +13,7 @@ public class WorldPopulation {
             currentWorldPopulation += numericalIncrease;
 
             System.out.printf("%d %s %d %s %d", year, space, currentWorldPopulation, space, numericalIncrease);
-            long total = (int)(Math.round(currentWorldPopulation / 1000000000.0) * 1000000000);
+            long total = (int)(Math.floor(currentWorldPopulation / 100_000_000.0) * 100_000_000);
             if (total == 2 * worldPopulationToday) {
                 result = year;
             }
@@ -21,5 +21,13 @@ public class WorldPopulation {
 
         }
         System.out.println(result);
+        /*
+        *            long population = 7_800_000_000L;
+           long anotherPopulation = 7_896_000_000L;
+
+           long firstResult = (long)Math.floor((double) anotherPopulation / 100_000_000) * 100_000_000;
+           System.out.println(population == firstResult);
+
+        * */
     }
 }

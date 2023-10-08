@@ -44,20 +44,18 @@ public class AutoInsuranceCompany {
     }
 
     public void state(@NotNull String state) {
-        String newState = null;
+       // String newState = null;
         if (state.equals("NY") || state.equals("CT") || state.equals("MA") || state.equals("NJ")) {
-            if (state.equals("NY")) {
-                newState = "New York";
-            } else if (state.equals("CT") ) {
-                newState = "Connecticut";
-            } else if (state.equals("MA") ) {
-                newState = "Massachusetts";
-            } else {
-                newState = "New Jersey";
-            }
-        } else throw new RuntimeException("Incorrect State");
+            this.state = state;
+      }
+        else throw new RuntimeException("Incorrect State");
 
-        this.state = newState;
+        //            newState = switch (state) {
+//                case "NY" -> "New York";
+//                case "CT" -> "Connecticut";
+//                case "MA" -> "Massachusetts";
+//                default -> "New Jersey";
+//
     }
 
     public String getState() {
