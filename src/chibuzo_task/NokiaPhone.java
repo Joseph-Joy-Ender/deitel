@@ -478,14 +478,13 @@ public class NokiaPhone {
         System.out.println(display);
     }
 
-    private static int errorMessage(){
+    private static void errorMessage(){
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input < 1 || input > 14){
             throw new RuntimeException("Enter a number between 1 and 14");
         }
-        return input;
-//        userPrompt();
+        //        userPrompt();
     }
 }
 
