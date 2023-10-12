@@ -11,11 +11,7 @@ public class FinancialApplicationPayroll {
     }
 
     public static void setNumberOfHours(int numberOfHours) {
-        if (numberOfHours > 0) {
-            FinancialApplicationPayroll.numberOfHours = numberOfHours;
-        }else {
-            FinancialApplicationPayroll.numberOfHours = 0;
-        }
+        FinancialApplicationPayroll.numberOfHours = Math.max(numberOfHours, 0);
     }
 
     public static double getGrossPay() {

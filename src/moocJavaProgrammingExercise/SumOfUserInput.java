@@ -8,7 +8,6 @@ public class SumOfUserInput {
 
     public SumOfUserInput(){
         this.sum = 0;
-        int number = 0;
     }
 
     public int getSum(){

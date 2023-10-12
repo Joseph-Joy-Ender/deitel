@@ -28,10 +28,7 @@ public class CreditLimitCalculator {
     }
 
     public void setTotalItems(int totalItems) {
-        if (totalItems < 0)this.totalItems = 0;
-        else {
-            this.totalItems = totalItems;
-        }
+        this.totalItems = Math.max(totalItems, 0);
     }
 
     public int getTotalOfCredits() {

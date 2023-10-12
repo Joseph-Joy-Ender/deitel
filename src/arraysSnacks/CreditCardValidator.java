@@ -41,18 +41,20 @@ public class CreditCardValidator {
     }
 
     public static void main(String[] args) {
-      //  System.out.println(CreditsCardValidators.lengthOfCreditCardNumber(4388576018410707L));
-       // System.out.println(gettingTheDigitsOfTheCreditCard(543217689));
-       // System.out.println(CreditsCardValidators.checkingTheValidityOfTheCard(4388576018402626L));
-        System.out.println(CreditsCardValidators.lengthOfCreditCardNumber(4388576018402626L));
-        System.out.println(CreditsCardValidators.creditCardType(4388576018402626L));
-        System.out.println(CreditsCardValidators.addNumbersGreaterThanNine(4388576018402626L));
-        System.out.println(CreditsCardValidators.additionOfEvenlyPlacedAndOddlyPlaced(4388576018402626L));
-        long creditCardNumber = 4388576018402626L;
-        String number = creditCardNumber + "";
-        System.out.println(CreditsCardValidators.oddlyPLaced(number.toCharArray()));
-        System.out.println(CreditsCardValidators.evenPlaced(number.toCharArray()));
-       // System.out.println(CreditsCardValidators.checkingTheValidityOfTheCard(4388576018402626L));
-        // System.out.println(CreditsCardValidators.creditCardType(9788576018402626L));
+//      //  System.out.println(CreditsCardValidators.lengthOfCreditCardNumber(4388576018410707L));
+//       // System.out.println(gettingTheDigitsOfTheCreditCard(543217689));
+//       // System.out.println(CreditsCardValidators.checkingTheValidityOfTheCard(4388576018402626L));
+//        System.out.println(CreditsCardValidators.lengthOfCreditCardNumber(4388576018402626L));
+//        System.out.println(CreditsCardValidators.creditCardType(4388576018402626L));
+//        System.out.println(CreditsCardValidators.addNumbersGreaterThanNine(4388576018402626L));
+//        System.out.println(CreditsCardValidators.additionOfEvenlyPlacedAndOddlyPlaced(4388576018402626L));
+//        long creditCardNumber = 4388576018402626L;
+//        String number = creditCardNumber + "";
+//        System.out.println(CreditsCardValidators.oddlyPLaced(number.toCharArray()));
+//        System.out.println(CreditsCardValidators.evenPlaced(number.toCharArray()));
+//       // System.out.println(CreditsCardValidators.checkingTheValidityOfTheCard(4388576018402626L));
+//        // System.out.println(CreditsCardValidators.creditCardType(9788576018402626L));
+
+     //   System.out.println(CreditsCardValidators.evenlyPlaced(4388576018410707L));
     }
 }

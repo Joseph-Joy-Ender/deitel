@@ -50,7 +50,7 @@ public class Animals {
         //System.out.println(animals);
         animals.setName("Dog");
         animals.setAge(30);
-        animals.setColour("purble Black");
+        animals.setColour("purple Black");
         animals.setType("Domestic Animal");
         System.out.println("Name of animal is :" + animals.getName());
         System.out.println("Age of animal is: " + animals.getAge());

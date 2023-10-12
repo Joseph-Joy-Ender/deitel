@@ -15,7 +15,11 @@ public class CheckOutApp {
         String customerName = scanner.nextLine();
 
         System.out.println("Select a Product");
-        int userSelection = scanner.nextInt();
+        String userSelection = scanner.nextLine();
+        System.out.println(customerName);
+        System.out.println(userSelection);
+
+
 
 
 
@@ -62,8 +66,8 @@ class ProductList {
 }
 
 class Products {
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
 
     public Products(String name, double price) {

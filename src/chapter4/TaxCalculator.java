@@ -13,13 +13,6 @@ public class TaxCalculator {
         return name;
     }
 
-    public void setCitizens(int citizens) {
-        this.citizens = citizens;
-    }
-
-    public int getCitizens() {
-        return citizens;
-    }
 
     public void setEarnings(double earnings) {
         if (earnings < 0) this.earnings = 0;

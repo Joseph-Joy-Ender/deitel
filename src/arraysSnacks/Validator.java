@@ -1,5 +1,13 @@
 package arraysSnacks;
 
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class Validator {
     public static void main(String[] args) {
         long creditCardNumber = 4388576018410707L;
@@ -50,8 +58,26 @@ public class Validator {
         //System.out.println(number.toCharArray());
         //System.out.println(evenPosition(number.toCharArray()));
         //System.out.println(oddPosition(number.toCharArray()));
+        Date date = new Date();
+        System.out.println(date);
+//        LocalDate localDate = LocalDate.now();
+//        System.out.println(localDate);
+     //   LocalDateTime localDateTime = LocalDateTime.now();
+       // System.out.println(localDateTime);
+        LocalTime localTime = LocalTime.now();
+        System.out.println(localTime);
 
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formattedDate = localDateTime.format(timeFormatter);
+        System.out.println(formattedDate);
 
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh.mm aa");
+        String time = simpleDateFormat.format(date);
+        System.out.println(time);
+
+        LocalDate localDate = LocalDate.now();
+        System.out.println("date: " + localDate + " " + time);
     }
     public static int evenPosition(char[] number){
 
@@ -93,5 +119,9 @@ public class Validator {
         }
         return total;
     }
+
+
+
+
 }
 

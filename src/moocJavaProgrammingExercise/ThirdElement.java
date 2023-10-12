@@ -12,5 +12,6 @@ public class ThirdElement {
         wordlist.add("Mary");
 
         System.out.println(wordlist.get(2));
+        System.out.println(wordlist.get(1));
     }
 }

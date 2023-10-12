@@ -1,6 +1,5 @@
 package randomExercises;
 
-import chapter1.Area;
 
 import javax.swing.*;
 import java.util.Scanner;

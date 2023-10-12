@@ -1,6 +1,5 @@
 package arraysSnacks;
 
-import java.util.Scanner;
 
 public class CreditsCardValidators {
 
@@ -57,10 +56,10 @@ public static String additionOfEvenlyPlacedAndOddlyPlaced(long creditCardNumber)
     if (lengthOfCreditCardNumber(creditCardNumber) >= 13 && lengthOfCreditCardNumber(creditCardNumber) <= 16) {
         int addition = (int) (oddlyPLaced(number.toCharArray()) + evenPlaced(number.toCharArray()));
         if (addition % 10 != 0) {
-            valid = "Invalid";
+            valid = "Invalid Card";
         }
     }else {
-        valid = "Invalid";
+        valid = "Invalid Card";
     }
     return valid;
 }
@@ -82,7 +81,7 @@ public static String creditCardType(long creditCardNumber) {
     } else if (firstDigitToNumber == 6) {
         number = "Discover cards";
     } else {
-        number = "Invalid";
+        number = "Invalid Card";
     }
     return number;
 

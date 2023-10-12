@@ -32,13 +32,13 @@ public class Program1 {
 //
         int number = 150;
       //  int count = 1;
-        for (; number > 50; ) {
+        while (number > 50) {
            // if (number == 10)  break;
                 System.out.println( "Joy is a girl ");
                // count++;
                 number-=35;
 
             }
-        }
+    }
     }
 
