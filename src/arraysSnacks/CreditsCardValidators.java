@@ -1,9 +1,11 @@
 package arraysSnacks;
 
 
+import org.jetbrains.annotations.NotNull;
+
 public class CreditsCardValidators {
 
-   public static long evenPlaced(char[] creditCardNumber){
+   public static long evenPlaced(@NotNull char[] creditCardNumber){
        int total = 0;
        for (int i = creditCardNumber.length; i > 0 ; i--) {
            if (i % 2 != 0) {
@@ -32,7 +34,7 @@ public class CreditsCardValidators {
  }
 
 
- public static long oddlyPLaced(char[] creditCardNumber){
+ public static long oddlyPLaced(@NotNull char[] creditCardNumber){
        int total = 0;
      for (int i = creditCardNumber.length; i > 0 ; i--) {
          if (i % 2 == 0){
@@ -64,6 +66,7 @@ public static String additionOfEvenlyPlacedAndOddlyPlaced(long creditCardNumber)
     return valid;
 }
 
+@NotNull
 public static String creditCardType(long creditCardNumber) {
     String number = creditCardNumber + "";
     String firstDigit = number.substring(0, 1);

@@ -447,6 +447,8 @@ public class NokiaPhone {
 
     private static void simServices() {
         mobile("SIM services³");
+        userPrompt();
+        endProgram();
     }
 
     private static void profiles() {
