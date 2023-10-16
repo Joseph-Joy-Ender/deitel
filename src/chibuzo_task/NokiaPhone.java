@@ -81,7 +81,8 @@ public class NokiaPhone {
                 11 -> Back
                 12 -> exit
                 """);
-        int phone = input.nextInt();
+      //  int phone = input.nextInt();
+        int phone = input(12);
         switch (phone) {
             case 1 -> mobile("Search");
             case 2 -> mobile("Service Nos");
@@ -141,9 +142,7 @@ public class NokiaPhone {
             case 4 -> mobile("Picture Messages");
             case 5 -> mobile("Templates");
             case 6 -> mobile("Smileys");
-            case 7 -> {
-                messageSetting();
-            }
+            case 7 -> messageSetting();
             case 8 -> mobile("Info services");
             case 9 -> mobile("Voice MailBox Number");
             case 10 -> mobile("Service Command Editor");
@@ -561,17 +560,17 @@ public class NokiaPhone {
     }
 
     private static int input(int second){
-      //  System.out.println("Enter number: ");
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        if (input < 1 || input > second){
+        while (input < 1 || input > second){
             mobile("Enter a number between " + 1 + " and " + second);
-            userPrompt();
-           // throw new RuntimeException("Enter a number between 1 and 14");
+            input = scanner.nextInt();
+
+          //  userPrompt();
 
         }
         return input;
-        //
+
     }
 }
 

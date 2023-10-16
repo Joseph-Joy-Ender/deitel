@@ -21,6 +21,7 @@ public class CheckingOutApp {
     String subTotals;
     double percentageDiscount;
     double subTotal = 0.0;
+
     public void customerCart() {
         scanner = new Scanner(System.in);
         display("What is the customers name: ");

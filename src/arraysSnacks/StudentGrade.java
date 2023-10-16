@@ -21,8 +21,7 @@ public class StudentGrade {
         System.out.println();
         // StudentGrade.gradeCollection(lagbaja);
 
-        for (int i = 0; i < lagbaja.length;
-        i++){
+        for (int i = 0; i < lagbaja.length;i++){
             for (int j = 0; j < lagbaja[i].length; j++) {
                 System.out.println(" Enter score for student " + (i + 1) + "\n " + "Enter score for subject " + (j + 1));
                 lagbaja[i][j] = scanner.nextInt();
@@ -32,7 +31,9 @@ public class StudentGrade {
             }
 
         }
-        System.out.println("Student         SUB1         SUB2      SUB3");
+
+
+
             for (int[] ints : lagbaja) {
                 for (int anInt : ints) {
                     System.out.printf("%13d", anInt);

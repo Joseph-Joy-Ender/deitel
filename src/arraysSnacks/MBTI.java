@@ -98,6 +98,7 @@ ArrayList<String> answers = new ArrayList<>();
             countA = 0;
             countB = 0;
 
+
         }
 
     }
