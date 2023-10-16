@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class TwoDimensionalArrays {
     public static void printMatrix(int[][] matrix) {
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                System.out.printf("%7d", matrix[row][col]);
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
+                System.out.printf("%7d", anInt);
 
             }
             System.out.println();
@@ -42,8 +42,6 @@ public class TwoDimensionalArrays {
             for (int j = 0; j < rowAndColumn[i].length; j++) {
                 rowAndColumn[i][j] = scanner.nextInt();
             }
-
-
 
         }
 

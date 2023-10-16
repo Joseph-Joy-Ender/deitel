@@ -12,7 +12,6 @@ public class NokiaPhone {
     public static void userPrompt() {
         Scanner userInput = new Scanner(System.in);
         menu();
-        errorMessage();
         int map = userInput.nextInt();
         switch (map) {
             case 1 -> phoneBook();
@@ -311,7 +310,8 @@ public class NokiaPhone {
                 10 -> Back
                 11. Exit
                 """);
-        int tones = input.nextInt();
+//        int tones = input.nextInt();
+        int tones = input(11);
         switch (tones) {
             case 1 -> mobile("Ringing tone");
             case 2 -> mobile("Ringing volume");
@@ -338,7 +338,8 @@ public class NokiaPhone {
                 5 -> Back
                 5 -> exit
                 """);
-        int setting = input.nextInt();
+//        int setting = input.nextInt();
+        int setting = input(6);
         switch (setting) {
             case 1 -> {
                 mobile("Call settings");
@@ -352,7 +353,8 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-                int settings = input.nextInt();
+//                int settings = input.nextInt();
+                int settings = input(8);
                 switch (settings){
                     case 1 -> mobile("Automatic redial");
                     case 2 -> mobile("Speed dialling");
@@ -377,12 +379,17 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-                int phoneSettings = input.nextInt();
+//                int phoneSettings = input.nextInt();
+                int phoneSettings = input(8);
                 switch (phoneSettings){
                     case 1 -> mobile("Language");
                     case 2 -> mobile("Call info display");
                     case 3 -> mobile("Welcome note");
                     case 4 -> mobile("Network selection");
+                    case 5 -> mobile("Lights");
+                    case 6 -> mobile("Confirm SIM service actions");
+                    case 7 -> settings();
+                    case 8 -> endProgram();
                 }
             }
             case 3 -> {
@@ -397,7 +404,8 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-                int securitySetting = input.nextInt();
+               // int securitySetting = input.nextInt();
+                int securitySetting = input(8);
                 switch (securitySetting){
                     case 1 -> mobile("PIN code request");
                     case 2 -> mobile("Call barring service");
@@ -428,8 +436,9 @@ public class NokiaPhone {
                 7. Back
                 8. Exit
                 """);
-        int clock = input.nextInt();
-        switch (clock) {
+        int userInput = input(8);
+        //int clock = input.nextInt();
+        switch (userInput) {
             case 1 -> mobile("Alarm clock");
             case 2 -> mobile("Clock setting");
             case 3 -> mobile("Date setting");
@@ -441,26 +450,101 @@ public class NokiaPhone {
     }
 
     private static void calculator() {
-        mobile("Calculator");
-        mobile("");
+        Scanner input = new Scanner(System.in);
+        mobile("""
+                1. Calculator
+                2. back
+                3. end program
+                """);
+        int calculate = input.nextInt();
+        switch (calculate){
+            case 1 -> {
+                Scanner scanner = new Scanner(System.in);
+                mobile("Calculator");
+                mobile("Enter the operation to make use of(eg. +, -)");
+                String op = scanner.nextLine();
+
+                mobile("Enter first number: ");
+                double first = scanner.nextDouble();
+                mobile("Enter second number: ");
+                double second = scanner.nextDouble();
+
+                switch (op) {
+                    case "+" -> System.out.println(first + second);
+                    case "-" -> System.out.println(first - second);
+                    case "/" -> System.out.println(first / second);
+                    case "*" -> System.out.println(first * second);
+                    default -> {
+                        System.out.println("Invalid operator");
+                        calculator();
+                    }
+                }
+            }
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
     }
 
     private static void simServices() {
-        mobile("SIM services³");
-        userPrompt();
-        endProgram();
+        Scanner input = new Scanner(System.in);
+        mobile("""
+                1. SIM services³
+                2. back
+                3. end program
+                """);
+        int services = input.nextInt();
+        switch (services){
+            case 1 -> mobile("SIM services³");
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
+
     }
 
     private static void profiles() {
-        mobile("Profiles");
+        Scanner input = new Scanner(System.in);
+       mobile("""
+               1. Profiles
+               2. Back
+               3. end program
+               """);
+       int profile = input.nextInt();
+       switch (profile){
+           case 1 -> mobile("Profiles");
+           case 2 -> userPrompt();
+           case 3 -> endProgram();
+       }
+
     }
 
     private static void reminders() {
-        mobile("Reminders");
+        Scanner input = new Scanner(System.in);
+        mobile("""
+                1. Reminders
+                2. back
+                3. end program
+                """);
+        int reminder = input.nextInt();
+        switch (reminder){
+            case 1 -> mobile("Reminders");
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
     }
 
     private static void games() {
-        mobile("Games");
+        Scanner input = new Scanner(System.in);
+        mobile("""
+                1. Games
+                2. back
+                3. end program
+                """);
+        int game = input.nextInt();
+        switch (game) {
+            case 1 -> mobile("Games");
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
     }
 
     private static void callDivert() {
@@ -475,18 +559,19 @@ public class NokiaPhone {
     private static void mobile(String input) {
         System.out.println(input);
     }
-    private static void input(String display){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(display);
-    }
 
-    private static void errorMessage(){
+    private static int input(int second){
+      //  System.out.println("Enter number: ");
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        if (input < 1 || input > 14){
-            throw new RuntimeException("Enter a number between 1 and 14");
+        if (input < 1 || input > second){
+            mobile("Enter a number between " + 1 + " and " + second);
+            userPrompt();
+           // throw new RuntimeException("Enter a number between 1 and 14");
+
         }
-        //        userPrompt();
+        return input;
+        //
     }
 }
 

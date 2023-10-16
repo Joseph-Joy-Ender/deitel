@@ -1,5 +1,9 @@
 package beginWithJavaExercises;
 
+import java.util.Arrays;
+
+import static java.math.BigInteger.ZERO;
+
 public class TwoDimArrayMethods {
     public void printMatrix(int[][] matrix){
         for (int[] ints : matrix) {
@@ -36,6 +40,23 @@ public class TwoDimArrayMethods {
         }
     }
 
+    public void sumOfColumn(int[][] matrix){
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[] columnSum = new int[cols];
+        for (int i = 0; i < cols; i++) {
+            int sum = 0;
+            for (int j = 0; j < rows; j++)
+                sum += matrix[j][i];
+            columnSum[i] = sum;
+
+        }
+        System.out.println("The sum of row " + " = " + Arrays.toString(columnSum));
+           // System.out.println(Arrays.toString(columnSum));
+    }
+
+
+
     public static void main(String[] args) {
         TwoDimArrayMethods operate = new TwoDimArrayMethods();
         int[][] board = {{20, 15, 6, 19, 18}, {4, 46, 24, 17, 18}, {12, 50, 23, 16, 31}};
@@ -43,6 +64,8 @@ public class TwoDimArrayMethods {
         System.out.println();
         operate.sumRows(board);
         System.out.println();
-        operate.largestInRows(board);
+      //  operate.largestInRows(board);
+        operate.sumOfColumn(board);
+
     }
 }
