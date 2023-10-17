@@ -32,8 +32,6 @@ public class StudentGrade {
 
         }
 
-
-
             for (int[] ints : lagbaja) {
                 for (int anInt : ints) {
                     System.out.printf("%13d", anInt);
@@ -41,6 +39,7 @@ public class StudentGrade {
                 }
                 System.out.println();
             }
+
 
 
 

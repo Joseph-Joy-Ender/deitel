@@ -16,7 +16,6 @@ public class MBTI {
     }
 ArrayList<String> answers = new ArrayList<>();
 
-
     String name;
     String[] questions = new String[20];
     public void quest1(){
@@ -41,7 +40,6 @@ ArrayList<String> answers = new ArrayList<>();
         questions[18] = "A. expend energy, enjoy groups     B. conserve energy, enjoy one-on-one";
         questions[19] = "A. Interpret literally     B. look for meaning and possibilities";
 
-
         answerEntered();
         aBCounter();
 
@@ -54,7 +52,7 @@ ArrayList<String> answers = new ArrayList<>();
             System.out.println(questions[i]);
             System.out.println("Select (A or B)");
             answer = scanner.nextLine().toUpperCase();
-            while (!answer.equals("A") && !answer.equals("B")){
+            while (!answer.equalsIgnoreCase("A") && !answer.equalsIgnoreCase("B")){
                 System.out.println("Expected A or B as a response");
                 System.out.println("I know this is an error, please retry again");
                 System.out.println(questions[i]);
@@ -62,10 +60,8 @@ ArrayList<String> answers = new ArrayList<>();
             }
             answers.add(answer.toUpperCase());
         }
-        System.out.println(answers);
+      //  System.out.println(answers);
     }
-
-
 
     public void aBCounter(){
         System.out.printf("""

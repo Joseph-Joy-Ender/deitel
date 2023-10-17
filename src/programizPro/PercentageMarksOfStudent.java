@@ -8,7 +8,7 @@ public class PercentageMarksOfStudent {
         double[] marks = new double[8];
 
         double sum = 0;
-        double percentageMarks = 0;
+        double percentageMarks;
         for (int i = 0; i < marks.length; i++) {
             System.out.println("Enter marks " + (i + 1));
             marks[i] = scanner.nextDouble();

@@ -111,13 +111,11 @@ public class CheckingOutApp {
 
     public void printHeader() {
         String header = """
-                ========================================================================
-                ITEM                         QTY          PRICE            TOTAL(NGN)
-                ------------------------------------------------------------------------
-                """;
-
+               ================================================================
+               Item                             Qty       Price        Total(NGN)\s
+               ----------------------------------------------------------------
+               """;
         System.out.println(header);
-        System.out.println();
     }
 
 
@@ -151,42 +149,35 @@ public class CheckingOutApp {
                 
                 """.formatted(date(), cashierName, customerName));
       display("""
-              ========================================================================
-              ITEM                         QTY          PRICE            TOTAL(NGN)
-              ------------------------------------------------------------------------
+              =============================================================================
+              ITEM                    QTY             PRICE             TOTAL(NGN)
+              -----------------------------------------------------------------------------
               """);
       calculations();
         secondBody();
     }
 
     public void secondBody(){
-        String subTotals = String.valueOf(subTotal);
-        String discountedPrice = discount;
-        double vats = vatAmount;
-        String billTotals = billTotal;
+        String body = """
+                                                             Amount Paid:%s
+                                                                 Balance:%s
+                    ====================================================================
+                    THANK YOU FOR YOUR PATRONAGE
+                    ====================================================================
+                    """.formatted(amountPaid, balance);
 
-
-        System.out.printf("""
-                ------------------------------------------------------------------------
-                                                            Sub Total:           %s
-                                                             Discount:           %s
-                                                         VAT @ 17.50%s:           %.2f
-                ========================================================================
-                                                           Bill Total:           %s
-                                                           Amount paid:          %s
-                                                           Balance:              %s
-                ========================================================================
-                THANK YOU FOR YOUR PATRONAGE
-                ========================================================================
-                """, subTotals, discountedPrice, percentageSymbol, vats, billTotals, amountPaid, balance);
+        System.out.println(body);
     }
 
     public void calculations(){
         for(int i = 0; i < productName.size(); i++) {
             subTotal += productQuantity.get(i) * productPrice.get(i);
-            System.out.println(productName.get(i) + "                      "+productQuantity.get(i)+"            "+productPrice.get(i)+"             "+ (productQuantity.get(i) * productPrice.get(i)));
+            System.out.printf("""
+                    %s                    %d             %.2f             %.2f
+                    
+                    """,productName.get(i), productQuantity.get(i), productPrice.get(i), (productQuantity.get(i) * productPrice.get(i)));
         }
-        System.out.println();
+      //  System.out.println();
         this.subTotals = String.valueOf(subTotal);
         double discount = subTotal * percentageDiscount;
         this.discount = String.valueOf(discount);
