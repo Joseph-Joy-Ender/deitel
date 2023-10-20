@@ -13,10 +13,10 @@ public class CountNumberOfDigits {
         for (int i = 0; i <= number ; i++) {
              sum = number % 10;
             count += 1;
-           // System.out.println(sum);
+           number /= 10;
         }
         System.out.println(sum);
-        System.out.println(count);
+        System.out.println(number);
 
     }
 }

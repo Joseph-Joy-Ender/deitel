@@ -64,7 +64,6 @@ public class NokiaPhone {
     }
 
     private static void phoneBook() {
-        Scanner input = new Scanner(System.in);
         mobile("PhoneBook");
         mobile("""
                 press
@@ -81,7 +80,6 @@ public class NokiaPhone {
                 11 -> Back
                 12 -> exit
                 """);
-      //  int phone = input.nextInt();
         int phone = input(12);
         switch (phone) {
             case 1 -> mobile("Search");
@@ -99,7 +97,7 @@ public class NokiaPhone {
                         3.Back
                         4.Exit
                         """);
-                int option = input.nextInt();
+                int option = input(4);
                 switch (option) {
                     case 1 -> mobile("Type of view");
                     case 2 -> mobile("Memory status");
@@ -117,7 +115,6 @@ public class NokiaPhone {
 
 
     private static void messages() {
-        Scanner input = new Scanner(System.in);
         mobile("Messages");
         mobile("""
                 press
@@ -134,7 +131,7 @@ public class NokiaPhone {
                 11 -> Back
                 12 -> exit
                 """);
-        int messages = input.nextInt();
+        int messages = input(12);
         switch (messages) {
             case 1 -> mobile("Write messages");
             case 2 -> mobile("Inbox");
@@ -152,18 +149,14 @@ public class NokiaPhone {
     }
 
     private static void messageSetting() {
-        Scanner input = new Scanner(System.in);
         mobile("Message settings");
-
         mobile("""
                 1. Set 1²
                 2. Common³
                 3. Back
                 4. exit
                 """);
-
-        int messagesSettings = input.nextInt();
-
+        int messagesSettings = input(4);
         switch (messagesSettings) {
             case 1 -> {
                 mobile("Set 1²");
@@ -174,7 +167,7 @@ public class NokiaPhone {
                         4. Back
                         5. exit
                         """);
-                int set1 = input.nextInt();
+                int set1 = input(5);
                 switch (set1) {
                     case 1 -> mobile("Message centre number");
                     case 2 -> mobile("Message sent as");
@@ -194,7 +187,7 @@ public class NokiaPhone {
                          4. Back
                          5. exit
                         """);
-                int common = input.nextInt();
+                int common = input(5);
                 switch (common) {
                     case 1 -> mobile("Delivery reports");
                     case 2 -> mobile("Reply via same centre");
@@ -212,7 +205,6 @@ public class NokiaPhone {
     }
 
     private static void callRegister() {
-        Scanner input = new Scanner(System.in);
         mobile("Call register");
         mobile("""
                 1 -> Missed calls
@@ -226,7 +218,7 @@ public class NokiaPhone {
                 9 -> Back
                 10 -> Exit
                 """);
-        int callRegister = input.nextInt();
+        int callRegister = input(10);
         switch (callRegister) {
             case 1 -> mobile("Missed calls");
             case 2 -> mobile("Received calls");
@@ -243,7 +235,7 @@ public class NokiaPhone {
                         6: Back
                         7. Exit
                         """);
-                int callDuration = input.nextInt();
+                int callDuration = input(7);
                 switch (callDuration) {
                     case 1 -> mobile("Last call duration");
                     case 2 -> mobile("All calls duration");
@@ -262,7 +254,7 @@ public class NokiaPhone {
                         3: Back
                         4: Exit
                         """);
-                int lastCall = input.nextInt();
+                int lastCall = input(4);
                 switch (lastCall){
                     case 1 -> mobile("All calls cost");
                     case 2 -> mobile("Clear timer");
@@ -279,7 +271,7 @@ public class NokiaPhone {
                          3: Back
                          4: Exit
                         """);
-                int callCost = input.nextInt();
+                int callCost = input(4);
                 switch (callCost){
                     case 1 -> mobile("Call cost limit");
                     case 2 -> mobile("Show costs in");
@@ -293,8 +285,7 @@ public class NokiaPhone {
         }
     }
 
-    private static void tones() {
-        Scanner input = new Scanner(System.in);
+    private static void tones(){
         mobile("Tones");
         mobile("""
                 1 -> Ringing tone
@@ -309,7 +300,6 @@ public class NokiaPhone {
                 10 -> Back
                 11. Exit
                 """);
-//        int tones = input.nextInt();
         int tones = input(11);
         switch (tones) {
             case 1 -> mobile("Ringing tone");
@@ -327,7 +317,6 @@ public class NokiaPhone {
     }
 
     private static void settings() {
-        Scanner input = new Scanner(System.in);
         mobile("Settings");
         mobile("""
                 1 -> Call settings
@@ -337,7 +326,6 @@ public class NokiaPhone {
                 5 -> Back
                 5 -> exit
                 """);
-//        int setting = input.nextInt();
         int setting = input(6);
         switch (setting) {
             case 1 -> {
@@ -352,7 +340,6 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-//                int settings = input.nextInt();
                 int settings = input(8);
                 switch (settings){
                     case 1 -> mobile("Automatic redial");
@@ -378,7 +365,6 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-//                int phoneSettings = input.nextInt();
                 int phoneSettings = input(8);
                 switch (phoneSettings){
                     case 1 -> mobile("Language");
@@ -403,7 +389,6 @@ public class NokiaPhone {
                         7. Back
                         8. Exit
                         """);
-               // int securitySetting = input.nextInt();
                 int securitySetting = input(8);
                 switch (securitySetting){
                     case 1 -> mobile("PIN code request");
@@ -423,7 +408,6 @@ public class NokiaPhone {
     }
 
     private static void clock() {
-        Scanner input = new Scanner(System.in);
         mobile("Clock");
         mobile("""
                 1. Alarm clock
@@ -436,7 +420,6 @@ public class NokiaPhone {
                 8. Exit
                 """);
         int userInput = input(8);
-        //int clock = input.nextInt();
         switch (userInput) {
             case 1 -> mobile("Alarm clock");
             case 2 -> mobile("Clock setting");
@@ -449,13 +432,12 @@ public class NokiaPhone {
     }
 
     private static void calculator() {
-        Scanner input = new Scanner(System.in);
         mobile("""
                 1. Calculator
                 2. back
                 3. end program
                 """);
-        int calculate = input.nextInt();
+        int calculate = input(3);
         switch (calculate){
             case 1 -> {
                 Scanner scanner = new Scanner(System.in);
@@ -485,13 +467,12 @@ public class NokiaPhone {
     }
 
     private static void simServices() {
-        Scanner input = new Scanner(System.in);
         mobile("""
                 1. SIM services³
                 2. back
                 3. end program
                 """);
-        int services = input.nextInt();
+        int services = input(3);
         switch (services){
             case 1 -> mobile("SIM services³");
             case 2 -> userPrompt();
@@ -501,13 +482,12 @@ public class NokiaPhone {
     }
 
     private static void profiles() {
-        Scanner input = new Scanner(System.in);
        mobile("""
                1. Profiles
                2. Back
                3. end program
                """);
-       int profile = input.nextInt();
+       int profile = input(3);
        switch (profile){
            case 1 -> mobile("Profiles");
            case 2 -> userPrompt();
@@ -517,13 +497,12 @@ public class NokiaPhone {
     }
 
     private static void reminders() {
-        Scanner input = new Scanner(System.in);
         mobile("""
                 1. Reminders
                 2. back
                 3. end program
                 """);
-        int reminder = input.nextInt();
+        int reminder = input(3);
         switch (reminder){
             case 1 -> mobile("Reminders");
             case 2 -> userPrompt();
@@ -532,13 +511,12 @@ public class NokiaPhone {
     }
 
     private static void games() {
-        Scanner input = new Scanner(System.in);
         mobile("""
                 1. Games
                 2. back
                 3. end program
                 """);
-        int game = input.nextInt();
+        int game = input(3);
         switch (game) {
             case 1 -> mobile("Games");
             case 2 -> userPrompt();
@@ -547,11 +525,31 @@ public class NokiaPhone {
     }
 
     private static void callDivert() {
-        mobile("call divert");
+        mobile("""
+                1. Call divert
+                2. back
+                3. end program
+                """);
+        int calls = input(3);
+        switch (calls){
+            case 1 -> mobile("Call divert");
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
     }
 
     private static void chat() {
-        mobile("Chat");
+        mobile("""
+                1. Chat
+                2. back
+                3. end program
+                """);
+        int chats = input(3);
+        switch (chats){
+            case 1 -> mobile("Chats");
+            case 2 -> userPrompt();
+            case 3 -> endProgram();
+        }
     }
 
 
@@ -566,7 +564,6 @@ public class NokiaPhone {
             mobile("Enter a number between " + 1 + " and " + second);
             input = scanner.nextInt();
 
-          //  userPrompt();
 
         }
         return input;

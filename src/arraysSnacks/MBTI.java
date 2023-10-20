@@ -60,7 +60,6 @@ ArrayList<String> answers = new ArrayList<>();
             }
             answers.add(answer.toUpperCase());
         }
-      //  System.out.println(answers);
     }
 
     public void aBCounter(){
