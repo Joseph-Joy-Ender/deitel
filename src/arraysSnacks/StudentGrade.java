@@ -1,6 +1,5 @@
 package arraysSnacks;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class StudentGrade {
@@ -10,6 +9,7 @@ public class StudentGrade {
 
         int student;
         int subject;
+
 
         System.out.println("How many students do you have? ");
         student = scanner.nextInt();
@@ -33,52 +33,38 @@ public class StudentGrade {
             }
 
         }
-        System.out.println();
+
+        System.out.println(printHeader(subject));
+        for (int i = 0; i < student; i++) {
+            String students = "Student " + (i + 1) + "     ";
+
+            System.out.println(students);
+
+        }
+
+
+
+
+    }
+
+
+    public static void displayScoresAndSubjects(int[][] lagbaja){
+        for (int[] ints : lagbaja) {
+            for (int anInt : ints) {
+                System.out.printf("%13d", anInt);
+
+            }
+            System.out.println();
+        }
+    }
+    public static String printHeader(int noOfSubjects){
         String header = "STUDENT      ";
-        for (int i = 0; i < subject; i++) {
+        for (int i = 0; i < noOfSubjects; i++) {
             String subjects = "SUB" + (i + 1) + "      ";
             header = header.concat(subjects);
+
         }
-        System.out.println(header + "Tot      " + "Ave      " + "Pos");
-//        System.out.print("STUDENT   ");
-//        for (int i = 0; i < subject; i++) {
-//            System.out.printf("%2s", "SUB" + (i + 1) + "\t");
-//        }
-//        System.out.println("Tot     " +  "Ave     " +  "Pos    ");
-//            System.out.printf("%6s%d", "SUB", (i + 1));
-//        }
-//        System.out.printf("%7s", "TOT");
-//        System.out.printf("%9s", "AVG");
-//        System.out.printf("%8s", "POS");
-//        System.out.println();
-//        equals();
-//        System.out.println();
-
-//        String header = "Subject      ";
-//        for (int i = 0; i < subject; i++) {
-//            String subjects = "SUB" + (i + 1) + "    ";
-//            header = header.concat(subjects);
-//        }
-////        System.out.println(header +  "Tot     " +  "Ave     " +  "Pos    ");
-//        System.out.println(header);
-//        System.out.printf("%7s", "TOT");
-//        System.out.printf("%9s", "AVG");
-//        System.out.printf("%8s", "POS");
-//        System.out.println();
-//        String string = "=";
-//        int count = 15;
-//        string.repeat(count);
-//        System.out.println();
-
-
-            for (int[] ints : lagbaja) {
-                for (int anInt : ints) {
-                    System.out.printf("%13d", anInt);
-
-                }
-                System.out.println();
-            }
-        System.out.println();
+        return header + "Tot      " + "Ave      " + "Pos";
 
     }
 

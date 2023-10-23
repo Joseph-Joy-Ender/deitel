@@ -17,5 +17,7 @@ public class SubStringsExamples {
         System.out.println(Arrays.toString(name.split("o", -2)));
         System.out.println(name.trim());
         System.out.println(name.strip());
+
+
     }
 }

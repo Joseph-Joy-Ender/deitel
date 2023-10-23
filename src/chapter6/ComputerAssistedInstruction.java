@@ -17,7 +17,6 @@ public class ComputerAssistedInstruction {
 
         if (answer == number1 * number2){
             System.out.println("Very good!");
-            secondQuestion();
         }
         while (answer != number1 * number2){
             System.out.println("No. Please try again.");
@@ -27,10 +26,10 @@ public class ComputerAssistedInstruction {
 
             if (answer == number1 * number2){
                 System.out.println("Very good!");
-              //  secondQuestion();
-            }
 
-            secondQuestion();
+           }
+
+
         }
     }
 
@@ -44,12 +43,7 @@ public class ComputerAssistedInstruction {
         System.out.println("How much is " + number1 + " times " + number2);
         int answer = scanner.nextInt();
 
-
-        while (answer == number1 * number2) {
-
-             number1 = secureRandom.nextInt(1, 9);
-             number2 = secureRandom.nextInt(1, 9);
-
+        while (answer != number1 * number2) {
             System.out.println("How much is " + number1 + " times " + number2);
             answer = scanner.nextInt();
         }
@@ -57,5 +51,6 @@ public class ComputerAssistedInstruction {
 
     public static void main(String[] args) {
         instructions();
+        secondQuestion();
     }
 }

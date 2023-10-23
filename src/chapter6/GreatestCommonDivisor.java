@@ -2,6 +2,12 @@ package chapter6;
 
 public class GreatestCommonDivisor {
 
+
+    public static void main(String[] args) {
+        System.out.println(gcd(42,18));
+
+    }
+
     public static int gcd(int number1, int number2){
         if (number1 < 0 && number2 < 0) return 0;
         int greatestDivisor = 1;

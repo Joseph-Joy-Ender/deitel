@@ -11,7 +11,7 @@ public class GuessTheNumberGame {
         SecureRandom secureRandom = new SecureRandom();
         boolean condition = true;
         while (condition){
-            System.out.println("Guess a number between 1 and 1000: ");
+            System.out.println("Guess a number between 1 and 15: ");
             int guessedNumber = scanner.nextInt();
 
             int guess = 1 + secureRandom.nextInt(1, 15);
@@ -24,7 +24,7 @@ public class GuessTheNumberGame {
 
             if (guessedNumber == guess){
                 System.out.println("Congratulations. You guessed the number!");
-                condition = false;
+                playAgain();
             }
 
         }
@@ -37,6 +37,18 @@ public class GuessTheNumberGame {
         String answer = scanner.nextLine();
         if (answer.equalsIgnoreCase("Y")){
             guessTheNumber();
+        }
+        while (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("N")){
+            System.out.println("Wrong input!!");
+            System.out.println("Do you want to play again? (y/n) ");
+             answer = scanner.nextLine();
+
+            if (answer.equalsIgnoreCase("Y")){
+                guessTheNumber();
+            }
+            if (answer.equalsIgnoreCase("N")){
+                break;
+            }
         }
     }
 

@@ -177,7 +177,6 @@ public class CheckingOutApp {
                     
                     """,productName.get(i), productQuantity.get(i), productPrice.get(i), (productQuantity.get(i) * productPrice.get(i)));
         }
-      //  System.out.println();
         this.subTotals = String.valueOf(subTotal);
         double discount = subTotal * percentageDiscount;
         this.discount = String.valueOf(discount);
