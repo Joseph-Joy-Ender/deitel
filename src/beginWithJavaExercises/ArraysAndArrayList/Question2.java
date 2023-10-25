@@ -6,6 +6,7 @@ public class Question2 {
         for (String result : strings) {
             System.out.println(result);
 
+
         }
     }
 }

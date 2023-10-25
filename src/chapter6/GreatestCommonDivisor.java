@@ -4,7 +4,7 @@ public class GreatestCommonDivisor {
 
 
     public static void main(String[] args) {
-        System.out.println(gcd(42,18));
+        System.out.println(gcd(8,12));
 
     }
 

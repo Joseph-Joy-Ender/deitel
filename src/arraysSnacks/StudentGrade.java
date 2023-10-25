@@ -34,13 +34,10 @@ public class StudentGrade {
 
         }
 
+
         System.out.println(printHeader(subject));
-        for (int i = 0; i < student; i++) {
-            String students = "Student " + (i + 1) + "     ";
 
-            System.out.println(students);
-
-        }
+        displayScoresAndSubjects(lagbaja);
 
 
 
@@ -49,13 +46,23 @@ public class StudentGrade {
 
 
     public static void displayScoresAndSubjects(int[][] lagbaja){
+        int i = 0;
         for (int[] ints : lagbaja) {
+            String students = "Student " + (i + 1) + "     ";
+            int total = 0;
+            double average = 0.0;
+            System.out.print(students);
             for (int anInt : ints) {
-                System.out.printf("%13d", anInt);
-
+                total += anInt;
+                average = (double) total / lagbaja.length;
+                System.out.print(anInt + "        ");
             }
+            System.out.print(total + "      ");
+            System.out.printf("%.2f", average);
             System.out.println();
+            i++;
         }
+
     }
     public static String printHeader(int noOfSubjects){
         String header = "STUDENT      ";
@@ -64,7 +71,7 @@ public class StudentGrade {
             header = header.concat(subjects);
 
         }
-        return header + "Tot      " + "Ave      " + "Pos";
+        return header + " Tot      " + " Ave     " +     "Pos";
 
     }
 

@@ -14,8 +14,5 @@ public class NaturalNumbers {
             System.out.println("The sum of 10 natural numbers = " + total);
             input.close();
 
-//        for (int count = 1; count <= 5 ; count++) {
-//            System.out.println("Count = " + count);
-//        }
     }
 }

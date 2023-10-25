@@ -18,15 +18,6 @@ public class CommonDivisor {
 
         System.out.printf("GCD of %d and %d is: %d", number1, number2, gcd);
 
-//        int number = 12;
-//        int number3 = 4;
-//      // int gcd = 1;
-//        for (int i = 1; i <= number && i <= number3 ; i++) {
-//            if (number % i == 0 && number3 % i == 0){
-//                 gcd = i;
-//            }
-//        }
-//        System.out.printf("GCD of number and number3 is: %d", number, number3, gcd );
         }
     }
 

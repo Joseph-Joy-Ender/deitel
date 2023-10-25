@@ -1,7 +1,4 @@
 package chibuzorAssignment;
-
-import java.util.Scanner;
-
 public class MathematicsAssignments {
 
 
@@ -13,26 +10,25 @@ public class MathematicsAssignments {
 
 
     public static boolean palindrome(String number){
-        String backward = "";
+        StringBuilder backward = new StringBuilder();
         int numberOfLength = 0;
 
         numberOfLength = numberOfLength + number.length();
         for (int i = numberOfLength - 1; i >= 0; i--) {
-            backward = backward + number.charAt(i);
+            backward.append(number.charAt(i));
         }
-        return number.equals(backward);
+        return number.contentEquals(backward);
     }
 
     public static int factors(int number){
         int total = 0;
-        for (int count = 1; count <= number ; count++) {
+        for (int count = 1; count <= number; count++) {
             if (number % count == 0)total++;
         }
-        return total++;
+        return total;
     }
 
     public static int subtract(int number1, int number2){
-       // return myAbs(number1 - number2);
         return Math.abs(number1 - number2);
     }
 
@@ -71,11 +67,11 @@ public class MathematicsAssignments {
         double squareRoot = Math.sqrt(number);
         int wholeNumberPart = (int) squareRoot;
         double fractionalPart = squareRoot - wholeNumberPart;
-        if (fractionalPart > 0.0) return false;
-        else {
-            return true;
-        }
+        return !(fractionalPart > 0.0);
     }
 
-
+    public static void main(String[] args) {
+        int number = 12;
+        System.out.println(MathematicsAssignments.factors(number));
+    }
 }

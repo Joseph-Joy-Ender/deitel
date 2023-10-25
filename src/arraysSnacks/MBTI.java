@@ -45,7 +45,6 @@ ArrayList<String> answers = new ArrayList<>();
 
         answerEntered();
         aBCounter();
-
     }
 
     public void answerEntered(){
