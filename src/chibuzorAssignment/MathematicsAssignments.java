@@ -71,7 +71,7 @@ public class MathematicsAssignments {
     }
 
     public static void main(String[] args) {
-        int number = 12;
-        System.out.println(MathematicsAssignments.factors(number));
+        String name = "outside";
+        System.out.println(MathematicsAssignments.palindrome(name));
     }
 }

@@ -30,7 +30,7 @@ public class ArrayClassExamples {
         }
 
         public int[] swap(int[] numbers){
-        int temp = 0;
+        int temp;
             for (int i = 0; i < numbers.length; i++) {
                 if (i < numbers.length - 3){
                     temp = numbers[i];
@@ -42,9 +42,9 @@ public class ArrayClassExamples {
             return numbers;
         }
 
-        public static int[] swaps(int[] numbers, int firstNumber, int secondNumber){
+        public static int[] swaps(int[] numbers, int secondNumber){
             for (int i = 0; i < numbers.length; i++) {
-                firstNumber = numbers[i];
+                int firstNumber = numbers[i];
                 numbers[i] = numbers[secondNumber];
                 numbers[secondNumber] = firstNumber;
 
@@ -55,8 +55,7 @@ public class ArrayClassExamples {
 
     public static void main(String[] args) {
         int[] numbers = {1,2,3,4,5,6};
-        int first = 0;
         int second = 2;
-        System.out.println(Arrays.toString(swaps(numbers, first, second)));
+        System.out.println(Arrays.toString(swaps(numbers, second)));
     }
 }

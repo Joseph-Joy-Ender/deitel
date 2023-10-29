@@ -36,4 +36,10 @@ class WeekendSnacksIsPalindromeTest {
         String example = "Joy";
         assertFalse(WeekendSnacks.isPalindrome(example));
     }
+
+    @Test
+    public void testPalindrome(){
+        String name = "Dad";
+        assertTrue(WeekendSnacks.isPalindrome(name));
+    }
 }

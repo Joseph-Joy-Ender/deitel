@@ -1,5 +1,7 @@
 package tdd;
 
+import java.util.Objects;
+
 public class Palindrome {
 
 
@@ -28,7 +30,7 @@ public class Palindrome {
     }
 
     public String viceVersa(String inputs) {
-        if (inputs == inputs) {
+        if (Objects.equals(inputs, inputs)) {
             System.out.println("It is not a palindrome");
         } else {
             System.out.println("It is a palindrome");

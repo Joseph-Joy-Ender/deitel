@@ -1,5 +1,7 @@
 package arraysSnacks;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentGradeExample {
@@ -71,6 +73,54 @@ public class StudentGradeExample {
         }
     }
 
+//    static ArrayList<Double> posit = new ArrayList<>();
+//    public static int[] position(int average){
+//        int counter = 0;
+//        int[] posit = new int[average];
+//        Arrays.fill(posit, 1);
+//
+//        for (int i = 0; i < posit.length; i++) {
+//            for (int j = 0; j < posit[i] ; j++) {
+//                if (i < j){
+//                    posit[counter] = counter+= 1;
+//                }
+//
+//            }
+//
+//        }
+//
+//        return posit;
+//    }
+public static double position(double average){
+    int counter = 0;
+    double[] posit = new double[(int) average];
+    Arrays.fill(posit, 1);
+
+    for (int i = 0; i < posit.length; i++) {
+        for (int j = 0; j < posit[i]; j++) {
+            if (i < j){
+                posit[counter] = counter += 1;
+            }
+
+        }
+
+    }
+
+    //  return studentsAverageScoreTemp.add(posit);
+    return posit[counter];
+}
+
+//    static double[] studentsAverageScoreTemp = new double[student];
+//    public static int getPosition(double averageScore, int average) {
+//        int i = 0;
+//        for (double ave: studentsAverageScoreTemp) {
+//            if(averageScore == ave) {
+//                break;
+//            }
+//            i++;
+//        }
+//        return i;
+//    }
     public static void main(String[] args) {
         question();
         displayingHeader();

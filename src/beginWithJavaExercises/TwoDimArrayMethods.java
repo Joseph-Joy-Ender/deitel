@@ -46,13 +46,12 @@ public class TwoDimArrayMethods {
         int[] columnSum = new int[cols];
         for (int i = 0; i < cols; i++) {
             int sum = 0;
-            for (int j = 0; j < rows; j++)
-                sum += matrix[j][i];
+            for (int[] ints : matrix) sum += ints[i];
             columnSum[i] = sum;
 
         }
-        System.out.println("The sum of row " + " = " + Arrays.toString(columnSum));
-           // System.out.println(Arrays.toString(columnSum));
+        System.out.println("The sum of column " + " = " + Arrays.toString(columnSum));
+
     }
 
 
@@ -64,7 +63,7 @@ public class TwoDimArrayMethods {
         System.out.println();
         operate.sumRows(board);
         System.out.println();
-      //  operate.largestInRows(board);
+        operate.largestInRows(board);
         operate.sumOfColumn(board);
 
     }
