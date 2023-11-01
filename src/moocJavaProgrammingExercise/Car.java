@@ -13,10 +13,6 @@ public class Car {
         this.name = name;
     }
 
-    public String getColour() {
-        return colour;
-    }
-
     public void setColour(String colour) {
         this.colour = colour;
     }
