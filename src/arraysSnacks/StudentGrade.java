@@ -19,7 +19,8 @@ public class StudentGrade {
 
     static double[] studentsAverageScoreTemp = new double[noOfStudents];
 
-    static int[] subjectsScores = new int[studentGrade.length];
+    static int[] subjectsScores;
+//    = new int[studentGrade[0].length];
 
     static int totalSubjectScore = 0;
 
@@ -141,14 +142,16 @@ public class StudentGrade {
         int count = 0;
         int fail = 0;
         int pass = 0;
-        for (int index = 0; index < studentGrade.length; index++) {
-            System.out.println("Subject " + (index + 1));
-            for (int index2 = 0; index2 < studentGrade.length; index2++) {
-                subjectsScores[index2] = studentGrade[index2][count];
-                totalSubjectScore += studentGrade[index2][count];
-                if(studentGrade[index2][count] < 50) fail++;
-                 else pass++;
-
+        for (int i = 0; i < studentGrade[0].length; i++) {
+            System.out.println("Subject " + (i + 1));
+            subjectsScores = new int[studentGrade[0].length];
+            for (int j = 0; j < studentGrade[0].length; j++) {
+                if (count < studentGrade[0].length){
+                    subjectsScores[j] = studentGrade[j][count];
+                    totalSubjectScore += studentGrade[j][count];
+                    if (studentGrade[j][count] < 50) fail++;
+                    else pass++;
+                }
             }
             subjectSummary2(pass, fail);
             count++;

@@ -88,9 +88,9 @@ public class CheckingOutApp {
     }
 
 
-    public String date() {
+    public static String date() {
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh.mm aa");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm aa");
         String time = simpleDateFormat.format(date);
         LocalDate localDate = LocalDate.now();
         return (localDate + " " + time);
