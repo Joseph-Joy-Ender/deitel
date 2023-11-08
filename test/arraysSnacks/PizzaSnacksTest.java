@@ -8,9 +8,9 @@ class PizzaSnacksTest {
 
     @Test
     void testForTotalSlicesOfPizzaForPeopleTakingLargePizza() {
-        int people = 15;
+        int people = 4;
        int expected = PizzaSnacks.totalNumberOfSlicesForSuperHungryPeople(people);
-       assertEquals(60, expected);
+       assertEquals(16, expected);
     }
 
     @Test

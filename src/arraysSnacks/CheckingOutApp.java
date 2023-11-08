@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class CheckingOutApp {
     Scanner scanner;
-    ArrayList<String> productName = new ArrayList<>();
-    ArrayList<Double> productPrice = new ArrayList<>();
-    ArrayList<Integer> productQuantity = new ArrayList<>();
+    ArrayList<String> productNames = new ArrayList<>();
+    ArrayList<Double> productPrices = new ArrayList<>();
+    ArrayList<Integer> productQuantities = new ArrayList<>();
    String billTotal;
     String customerName;
     String cashierName;
@@ -39,7 +39,7 @@ public class CheckingOutApp {
                  answer = scanner.nextLine();
                 if (answer.equalsIgnoreCase("n")) condition = false;
             }
-        }
+         }
         display("What is your name: ");
         cashierName = scanner.nextLine();
         display("How much discount will he get? ");
@@ -57,7 +57,7 @@ public class CheckingOutApp {
         Scanner input = new Scanner(System.in);
         display("What did the customer buy? ");
         String name = input.nextLine();
-        productName.add(name);
+        productNames.add(name);
         display("How many pieces: ");
         int quantity = input.nextInt();
         while (quantity < 0 || quantity == 0){
@@ -65,7 +65,7 @@ public class CheckingOutApp {
             display("How many pieces: ");
              quantity = input.nextInt();
         }
-        productQuantity.add(quantity);
+        productQuantities.add(quantity);
         display("How much per product: ");
         double price = input.nextDouble();
         while (price < 0 || price == 0){
@@ -73,7 +73,7 @@ public class CheckingOutApp {
             display("How much per product: ");
             price = input.nextDouble();
         }
-        productPrice.add(price);
+        productPrices.add(price);
     }
     public void balanceGiven(){
         Scanner input = new Scanner(System.in);
@@ -170,12 +170,12 @@ public class CheckingOutApp {
     }
 
     public void calculations(){
-        for(int i = 0; i < productName.size(); i++) {
-            subTotal += productQuantity.get(i) * productPrice.get(i);
+        for(int i = 0; i < productNames.size(); i++) {
+            subTotal += productQuantities.get(i) * productPrices.get(i);
             System.out.printf("""
                     %s                    %d             %.2f             %.2f
                     
-                    """,productName.get(i), productQuantity.get(i), productPrice.get(i), (productQuantity.get(i) * productPrice.get(i)));
+                    """, productNames.get(i), productQuantities.get(i), productPrices.get(i), (productQuantities.get(i) * productPrices.get(i)));
         }
         this.subTotals = String.valueOf(subTotal);
         double discount = subTotal * percentageDiscount;

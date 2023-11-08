@@ -20,7 +20,7 @@ public class SortingAnArrayInDescendingOrder {
         int[] array = {32, 4, 6, 7, 8, 9};
         sorted(array);
         for (int i : array) {
-            System.out.print(i);
+            System.out.println(i);
 
         }
     }

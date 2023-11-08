@@ -172,5 +172,6 @@ public class StudentGrade {
         System.out.println("Average score is: " + (totalSubjectScore / studentGrade.length));
         System.out.println("Number of passes: " + pass);
         System.out.println("Number of fails: " + fail);
+        System.out.println();
     }
 }

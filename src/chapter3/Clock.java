@@ -22,9 +22,10 @@ public record Clock(int hour, int minute, int second) {
         }
     }
 
-    @NotNull
-    public String displayTime() {
-        return hour() + " : " + minute() + " : " + second();
-    }
+   public String toString() {
+        return "Hour" + ": " + hour + "\tMinute" + ": " + minute + "\tSecond" + ": " + second;
+
+   }
+
 }
 
