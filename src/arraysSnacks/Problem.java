@@ -7,6 +7,7 @@ public class Problem {
 
     public Problem(String name, Type type) {
 
+
     }
 
 
