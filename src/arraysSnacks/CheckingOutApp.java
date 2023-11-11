@@ -36,7 +36,7 @@ public class CheckingOutApp {
             while (!answer.equalsIgnoreCase("n") && !answer.equalsIgnoreCase("y")){
                 System.out.println("Wrong input");
                 display("Add more items?(y or n) ");
-                 answer = scanner.nextLine();
+                  answer = scanner.nextLine();
                 if (answer.equalsIgnoreCase("n")) condition = false;
             }
          }

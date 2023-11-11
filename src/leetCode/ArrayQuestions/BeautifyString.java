@@ -6,6 +6,7 @@ public class BeautifyString {
     public String addFullStop(String string){
         int index = string.length() -1;
         String last = String.valueOf(string.charAt(index));
+
         if (last.endsWith(".")) return string;
         else return string.concat(".");
     }

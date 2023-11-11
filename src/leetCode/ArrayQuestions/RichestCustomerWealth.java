@@ -26,7 +26,7 @@ public class RichestCustomerWealth {
 
     public static void main(String[] args) {
         RichestCustomerWealth richestCustomerWealth = new RichestCustomerWealth();
-        int[][] accounts = {{1, 5}, {7, 3}, {3, 5}};
+        int[][] accounts = {{1, 5, 9}, {7, 9, 8}, {3, 5, 7}};
         System.out.println(Arrays.toString(richestCustomerWealth.maximumWealth(accounts)));
     }
 }
