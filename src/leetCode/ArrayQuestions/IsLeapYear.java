@@ -7,7 +7,7 @@ public class IsLeapYear {
     }
 
     public static void main(String[] args) {
-        int year = 2000;
+        int year = 2005;
         IsLeapYear isLeapYear = new IsLeapYear();
         System.out.println(isLeapYear.isLeapYear(year));
     }

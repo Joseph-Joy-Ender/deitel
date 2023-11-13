@@ -10,8 +10,7 @@ public class CheckingOutApp {
     ArrayList<String> productNames = new ArrayList<>();
     ArrayList<Double> productPrices = new ArrayList<>();
     ArrayList<Integer> productQuantities = new ArrayList<>();
-   String billTotal;
-    String customerName;
+   String billTotal; String customerName;
     String cashierName;
     String discount;
     double balance;
@@ -184,14 +183,5 @@ public class CheckingOutApp {
         this.vatAmount = Double.parseDouble(String.valueOf(vat));
         this.billTotal = String.valueOf(subTotal  - discount + vat);
     }
-    public static void main(String[] args) {
-        CheckingOutApp checkingOutApp = new CheckingOutApp();
-       checkingOutApp.customerCart();
-        checkingOutApp.balanceGiven();
-        checkingOutApp.receipt();
 
-
-
-
-    }
 }
