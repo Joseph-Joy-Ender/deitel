@@ -1,79 +1,59 @@
 package chapter6;
 
+import javax.swing.*;
+import java.security.SecureRandom;
+import java.util.Random;
+
 public class ReducingStudentFatigue {
+    static int number1 = generateRandomNumber();
+    static int number2 = generateRandomNumber();
+    static String message;
+    public static void firstQuestion() {
+        int answer;
+        while (true) {
+            answer = Integer.parseInt(JOptionPane.showInputDialog("How much is " + number1 + " times " + number2));
+            if (answer != number1 * number2){
+               JOptionPane.showMessageDialog(null, possibleResponseToIncorrectAnswer());
+            }
+            if (answer == number1 * number2) {
+                JOptionPane.showMessageDialog(null, possibleResponseToCorrectAnswer());
+                number1 = generateRandomNumber();
+                number2 = generateRandomNumber();
+            }
+        }
+    }
+    public static int generateRandomNumber() {
+        SecureRandom secureRandom = new SecureRandom();
+        return secureRandom.nextInt(1, 9);
+    }
+
+    public static String possibleResponseToCorrectAnswer() {
+        Random random = new Random();
+        int rand = random.nextInt(1, 5);
+        switch (rand) {
+            case 1 -> message = "Very good!";
+            case 2 -> message = "Excellent!";
+            case 3 -> message = "Nice work!";
+            case 4 -> message = "Keep up the good work!";
+        }
+        return message;
+
+    }
+    public static String possibleResponseToIncorrectAnswer() {
+        Random random = new Random();
+        String rand = String.valueOf(random.nextInt(1, 5));
+        switch (rand) {
+            case "1" -> message = "No. Please try again.";
+            case "2" -> message = "Wrong. try once more.";
+            case "3" -> message = "Don't give up!";
+            case "4" -> message = "No. Keep trying.";
+
+        }
+
+        return message;
+    }
 
     public static void main(String[] args) {
-        int[][] studentGrade = {{67, 21, 49},{98, 62, 56},{93, 34, 27}, {78, 83, 66}};
-        //studentsSubjectGrade = {{1,2},{45,56}, {72,48}};
-        int x = 0;
-        for(int i = 0; i < studentGrade.length; i++) {
-            System.out.println("Subject " + (i+1));
-            int[] subjectsScores = new int[studentGrade.length];
-            int totalSubjectScore = 0;
-            int fail = 0;
-            int pass = 0;
-
-            for (int j = 0; j < studentGrade.length; j++) {
-             //   System.out.println(studentGrade[j][x]); // 00, 10 == 01, 11 == 02, 12
-                subjectsScores[j] = studentGrade[j][x];
-                totalSubjectScore += studentGrade[j][x];
-                if(studentGrade[j][x] < 50) {
-                    fail++;
-                } else {
-                    pass++;
-                }
-
-            }
-            // Student
-            System.out.print("highest scoring student is student " + (getStudentIndex(highest(subjectsScores), subjectsScores) + 1));
-            // Score
-            System.out.println(" scoring " + highest(subjectsScores));
-
-            // Student
-            System.out.print("lowest scoring student is student " + (getStudentIndex(lowest(subjectsScores), subjectsScores) + 1));
-            // Score
-            System.out.println(" scoring " + lowest(subjectsScores));
-
-            System.out.println("Total score is " + totalSubjectScore);
-            System.out.println("Average score is: " + (totalSubjectScore / studentGrade.length));
-            System.out.println("Number of passes: " + pass);
-            System.out.println("Number of fails: " + fail);
-            x++;
-
-        }
+        MonitoringStudentPerformance.firstQuestion();
     }
-
-    public static int highest(int[] arr) {
-        //subjects
-        int largest = arr[0];
-        for (int j = 0; j < arr.length; j++) {
-            if(largest < arr[j]) {
-                largest = arr[j];
-            }
-        }
-        return largest;
-    }
-
-    public static int lowest(int[] arr) {
-        int lowest = arr[0];
-        for (int j = 0; j < arr.length; j++) {
-            if(lowest > arr[j]) {
-                lowest = arr[j];
-            }
-        }
-        return lowest;
-    }
-
-    public static int getStudentIndex(int score, int[] subjectScores) {
-        int index = 0;
-        for(int i: subjectScores) {
-            if(score == i) {
-                break;
-            }
-            index++;
-        }
-
-        return index;
-    }
-
 }

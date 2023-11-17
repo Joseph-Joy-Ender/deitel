@@ -2,7 +2,6 @@ package chapter4;
 
 public class TaxCalculator {
     private String name;
-    private int citizens;
     private double earnings;
 
 

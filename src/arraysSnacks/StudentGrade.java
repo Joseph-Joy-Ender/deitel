@@ -9,21 +9,15 @@ public class StudentGrade {
 
         displayQuestion1();
         subjectSummary();
-
-
     }
 
     static int noOfStudents;
     static int noOfSubjects;
     static int[][] studentGrade = new int[noOfStudents][noOfSubjects];
-
     static double[] studentsAverageScoreTemp = new double[noOfStudents];
-
     static int[] subjectsScores;
-//    = new int[studentGrade[0].length];
 
     static int totalSubjectScore = 0;
-
 
     public static void displayQuestion2(){
         int[] studentsTotalScore = new int[noOfStudents];
@@ -40,11 +34,9 @@ public class StudentGrade {
                 System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>> ");
                 System.out.println("Saved successfully");
                 System.out.println();
-
             }
             studentsTotalScore[i] = totalScore;
             studentsAverageScore[i] = (double) totalScore / noOfSubjects;
-
         }
         studentsAverageScoreTemp = Arrays.copyOf(studentsAverageScore, noOfStudents);
         Arrays.sort(studentsAverageScoreTemp);
@@ -61,7 +53,6 @@ public class StudentGrade {
             System.out.println();
         }
         System.out.println(printingLines());
-
     }
     public static void displayQuestion1(){
         Scanner scanner = new Scanner(System.in);
@@ -77,20 +68,16 @@ public class StudentGrade {
         System.out.println();
         displayQuestion2();
     }
-
-
     public static String printHeader(int noOfSubjects){
         System.out.println(printingLines());
         String header = "STUDENT      ";
         for (int i = 0; i < noOfSubjects; i++) {
             String subjects = "SUB" + (i + 1) + "      ";
             header = header.concat(subjects);
-
         }
         System.out.println(printingLines());
         return header + "Tot      " + " Ave     " +     "Pos";
     }
-
 
     public static int position(double averageScore){
         int i = 0;
@@ -108,21 +95,17 @@ public class StudentGrade {
         int highest = array[0];
         for (int i : array) {
             if (highest < i) highest = i;
-
         }
         return highest;
 
     }
-
     public static int lowestScore(int[] array) {
         int lowest = array[0];
         for (int i : array) {
             if (lowest > i) lowest = i;
-
         }
         return lowest;
     }
-
 
     public static int getStudentIndex(int score, int[] subjectScores) {
         int index = 0;
@@ -142,10 +125,10 @@ public class StudentGrade {
         int count = 0;
         int fail = 0;
         int pass = 0;
-        for (int i = 0; i < studentGrade[0].length; i++) {
+        for (int i = 0; i < noOfSubjects; i++) {
             System.out.println("Subject " + (i + 1));
-            subjectsScores = new int[studentGrade[0].length];
-            for (int j = 0; j < studentGrade[0].length; j++) {
+            subjectsScores = new int[studentGrade.length];
+            for (int j = 0; j < studentGrade[i].length; j++) {
                 if (count < studentGrade[0].length){
                     subjectsScores[j] = studentGrade[j][count];
                     totalSubjectScore += studentGrade[j][count];
@@ -162,7 +145,6 @@ public class StudentGrade {
         System.out.print("highest scoring student is student " + (getStudentIndex(highestScore(subjectsScores), subjectsScores) + 1));
 
         System.out.println(" scoring " + highestScore(subjectsScores));
-
 
         System.out.print("lowest scoring student is student " + (getStudentIndex(lowestScore(subjectsScores), subjectsScores) + 1));
 

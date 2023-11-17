@@ -13,6 +13,10 @@ public class ComputerAssistedInstruction {
         int number1 = secureRandom.nextInt(1, 9);
         int number2 = secureRandom.nextInt(1, 9);
 
+        extracted(number1, number2, scanner);
+    }
+
+    private static void extracted(int number1, int number2, Scanner scanner) {
         System.out.println("How much is " + number1 + " times " + number2);
         int answer = scanner.nextInt();
 
@@ -29,8 +33,6 @@ public class ComputerAssistedInstruction {
                 System.out.println("Very good!");
 
            }
-
-
         }
     }
 
@@ -104,8 +106,6 @@ public class ComputerAssistedInstruction {
         }
 
     }
-
-
 
     public static void main(String[] args) {
         instructions();

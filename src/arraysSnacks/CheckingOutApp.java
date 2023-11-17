@@ -10,13 +10,13 @@ public class CheckingOutApp {
     ArrayList<String> productNames = new ArrayList<>();
     ArrayList<Double> productPrices = new ArrayList<>();
     ArrayList<Integer> productQuantities = new ArrayList<>();
-   String billTotal; String customerName;
+    String billTotal; String customerName;
     String cashierName;
     String discount;
     double balance;
     double vatAmount;
     double amountPaid;
-   String percentageSymbol = "%";
+    String percentageSymbol = "%";
     String subTotals;
     double percentageDiscount;
     double subTotal = 0.0;
@@ -42,7 +42,7 @@ public class CheckingOutApp {
         display("What is your name: ");
         cashierName = scanner.nextLine();
         display("How much discount will he get? ");
-       int discountRate = scanner.nextInt();
+       double discountRate = scanner.nextDouble();
          percentageDiscount = discountRate / 100.0;
 
         invoice();
@@ -157,17 +157,30 @@ public class CheckingOutApp {
     }
 
     public void secondBody(){
+        printSecondBody();
         String body = """
-                                                             Amount Paid:%s
-                                                                 Balance:%s
+                                                        %s
+                                                        Bill Total:       %s
+                                                        Amount Paid:      %s
+                                                           Balance:          %s
                     ====================================================================
                     THANK YOU FOR YOUR PATRONAGE
                     ====================================================================
-                    """.formatted(amountPaid, balance);
+                    """.formatted(printSecondBody(), billTotal, amountPaid, balance);
 
         System.out.println(body);
     }
 
+    public String printSecondBody(){
+        return  toString().formatted("""
+                ------------------------------------------------------------------------
+                                                            Sub Total:           %s
+                                                             Discount:           %s
+                                                         VAT @ 17.50%s:           %.2f
+                ========================================================================
+                """, subTotals, discount, percentageSymbol, vatAmount);
+
+    }
     public void calculations(){
         for(int i = 0; i < productNames.size(); i++) {
             subTotal += productQuantities.get(i) * productPrices.get(i);
