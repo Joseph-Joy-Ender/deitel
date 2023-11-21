@@ -10,7 +10,7 @@ public class GuessTheNumberGame {
         Scanner scanner = new Scanner(System.in);
         SecureRandom secureRandom = new SecureRandom();
         boolean condition = true;
-        while (condition){
+        while (true){
             System.out.println("Guess a number between 1 and 15: ");
             int guessedNumber = scanner.nextInt();
 
@@ -34,20 +34,22 @@ public class GuessTheNumberGame {
     public static void playAgain(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to play again? (y/n) ");
-        String answer = scanner.nextLine();
+        String answer = scanner.next();
         if (answer.equalsIgnoreCase("Y")){
             guessTheNumber();
+        }else {
+            System.exit(0);
         }
         while (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("N")){
             System.out.println("Wrong input!!");
             System.out.println("Do you want to play again? (y/n) ");
-             answer = scanner.nextLine();
+             answer = scanner.next();
 
             if (answer.equalsIgnoreCase("Y")){
                 guessTheNumber();
             }
             if (answer.equalsIgnoreCase("N")){
-                break;
+                System.exit(0);
             }
         }
     }
