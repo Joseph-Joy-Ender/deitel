@@ -1,71 +1,32 @@
 package DataStructure;
 
 public class Set {
-    private int size;
-    private int capacity = 10;
-    private final String[] array;
 
+    private final MyArrayList myArrayList = new MyArrayList();
 
-
-    public Set(){
-        this.array = new String[capacity];
-    }
-
-    public Set(int userCapacity) {
-        this.capacity = userCapacity;
-        this.array = new String[userCapacity];
-
-    }
     public boolean isEmpty() {
-        return size == 0;
+        return myArrayList.isEmpty();
     }
 
     public void add(String element) {
-        if (!isDuplicate(element)){
-            array[size] = element;
-            size++;
+        if (!myArrayList.contain(element)) {
+            myArrayList.add(element);
         }
     }
-
-    public boolean isDuplicate(String element) {
-        if (array.length != 0) {
-            for (int i = 0; i < size; i++) {
-                if (array[i].equals(element)) return true;
-
-            }
-        }
-        return false;
-    }
-    public  int getSize() {
-        return size;
+    public int getSize() {
+        return myArrayList.getSize();
     }
 
     public void remove(String element){
-        for (int i = 0; i < size; i++) {
-            if (array[i].equals(element)) {
-                for (int j = 0; j < (size - i - 1); j++) {
-                    array[i + j] = array[i + j + 1];
-                }
-                array[size - 1] = null;
-                size--;
-            }
-//            if (size <= (capacity / 3))
-//                trim();
-
-        }
+        myArrayList.remove(element);
     }
 
     public String toString(){
-        StringBuilder string = new StringBuilder();
-        for (int i = 0; i < capacity; i++){
-            string.append(array[i]).append(", ");
-        }
-        if (!string.isEmpty()){
-            string = new StringBuilder("[" + string.substring(0, string.length() - 2) + "]");
-        }else string = new StringBuilder("[]");
-
-        return string.toString();
+        return myArrayList.toString();
     }
 
+    public void get(String element){
+        myArrayList.get(element);
+    }
 
 }
