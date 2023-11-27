@@ -2,7 +2,7 @@ package Banking;
 
 import Banking.exception.InsufficientFund;
 import Banking.exception.InvalidAmount;
-import Banking.exception.InvalidPin;
+import Banking.exception.InvalidPinException;
 import Banking.exception.NegativeAmount;
 
 import java.util.Scanner;
@@ -27,9 +27,21 @@ public class BankApp {
             case '3' -> withdraw();
             case '4' -> transfer();
             case '5' -> checkBalance();
-            case '6' -> exit();
+            case '6' -> removeAccount();
+            case '7' -> exit();
         }
 
+    }
+
+    private static void removeAccount() {
+        Scanner scanner = new Scanner(System.in);
+        display("Enter your account number: ");
+        String number = scanner.nextLine();
+
+        bank.removeAccount(number);
+        bank.print();
+        System.out.println();
+        mainMenu();
     }
 
     private static void exit() {
@@ -49,11 +61,12 @@ public class BankApp {
 
             display(String.valueOf(bank.checkBalance(number, Integer.parseInt(pin))));
 
-        }catch (NullPointerException | InvalidPin nullPointerException){
+        }catch (NullPointerException | InvalidPinException nullPointerException){
             display(nullPointerException.getMessage());
             checkBalance();
         }
 
+        System.out.println();
         mainMenu();
     }
 
@@ -74,12 +87,14 @@ public class BankApp {
             String pin = scanner.nextLine();
 
             bank.transfer(Double.parseDouble(amount), sender, receiver, Integer.parseInt(pin));
-            display(bank.toString());
-        }catch (InvalidPin | NullPointerException | InvalidAmount invalidPin){
+
+            bank.print();
+        }catch (InvalidPinException | NullPointerException | InvalidAmount invalidPin){
             display(invalidPin.getMessage());
             transfer();
         }
 
+        System.out.println();
         mainMenu();
 
     }
@@ -98,11 +113,13 @@ public class BankApp {
 
             display("Your deposit was successful");
 
-            display(bank.toString());
+
+            bank.print();
         }catch (InvalidAmount | NumberFormatException invalidAmount){
             display(invalidAmount.getMessage());
             deposit();
         }
+        System.out.println();
         mainMenu();
 
     }
@@ -121,11 +138,13 @@ public class BankApp {
             String pin = scanner.nextLine();
 
             bank.withdraw(number, Integer.parseInt(pin), Double.parseDouble(amount));
-            display(bank.toString());
-        }catch (InvalidPin | InsufficientFund | NegativeAmount invalidPin){
+            bank.print();
+
+        }catch (InvalidPinException | InsufficientFund | NegativeAmount invalidPin){
             display(invalidPin.getMessage());
             withdraw();
         }
+        System.out.println();
         mainMenu();
 
     }
@@ -140,7 +159,8 @@ public class BankApp {
                 3 -> withdraw
                 4 -> transfer
                 5 -> checkBalance
-                6 -> exit
+                6 -> removeAccount
+                7 -> exit
                 """;
         display(menu);
     }
@@ -159,8 +179,9 @@ public class BankApp {
         bank.createAccount(firstName, lastName, Integer.parseInt(pin));
 
         display("Account successfully created!!!");
+        System.out.println();
 
-        display(bank.toString());
+        bank.print();
         mainMenu();
 
     }

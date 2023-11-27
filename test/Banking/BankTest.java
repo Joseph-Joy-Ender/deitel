@@ -57,7 +57,6 @@ public class BankTest {
     @Test
     void testThatNegativeAmountCannotBeDeposited(){
         Bank bank = new Bank("BankName");
-        Account firstAccount = bank.createAccount("firstName", "lastName", 1234);
         assertThrows(InvalidAmount.class, () ->  bank.deposit(-2_000, "1"));
 
     }
@@ -87,6 +86,17 @@ public class BankTest {
 
         assertEquals(2_000, firstAccount.checkBalance(1234));
         assertEquals(3_000, secondAccount.checkBalance(1234));
+
+    }
+
+    @Test
+    void testThatAccountCanBeRemoved() {
+        Bank bank = new Bank("BankName");
+        Account firstAccount = bank.createAccount("firstName", "lastName", 1234);
+        Account secondAccount = bank.createAccount("firstName", "lastName", 1234);
+        assertEquals(2, bank.getTotalNumberOfAccounts());
+       bank.removeAccount("1");
+       assertEquals(1, bank.getTotalNumberOfAccounts());
 
     }
 }

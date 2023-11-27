@@ -30,7 +30,7 @@ public class Bank {
     }
 
     public int getTotalNumberOfAccounts() {
-       return totalNumberOfAccounts++;
+       return accounts.size();
     }
 
     public Account findAccount(String number) {
@@ -59,14 +59,22 @@ public class Bank {
         account2.deposit(amount);
     }
 
-    public String toString() {
-        return accounts.toString();
+    public void print() {
+        for (Account account: accounts) {
+            System.out.println(account);
+
+        }
+
     }
 
     public double checkBalance(String number, int pin) {
         Account account = findAccount(number);
        return account.checkBalance(pin);
 
+    }
+
+    public void removeAccount(String number){
+        accounts.removeIf(account -> account.accountNumber().equals(number));
     }
 
 

@@ -2,7 +2,7 @@ package Banking;
 
 import Banking.exception.InsufficientFund;
 import Banking.exception.InvalidAmount;
-import Banking.exception.InvalidPin;
+import Banking.exception.InvalidPinException;
 import Banking.exception.NegativeAmount;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,7 +43,7 @@ class AccountTest {
 
     @Test
     void testThatPinMustBeCorrect() {
-        assertThrows(InvalidPin.class, () -> account.checkBalance(12347));
+        assertThrows(InvalidPinException.class, () -> account.checkBalance(12347));
     }
 
     @Test

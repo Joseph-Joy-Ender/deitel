@@ -2,7 +2,7 @@ package Banking;
 
 import Banking.exception.InsufficientFund;
 import Banking.exception.InvalidAmount;
-import Banking.exception.InvalidPin;
+import Banking.exception.InvalidPinException;
 import Banking.exception.NegativeAmount;
 
 public class Account {
@@ -32,7 +32,7 @@ public class Account {
     }
 
     private void validate(int pin){
-        if (pin != this.pin) throw new InvalidPin("Incorrect pin");
+        if (pin != this.pin) throw new InvalidPinException("Incorrect pin");
     }
 
     public void withdraw(double amount, int pin) {
