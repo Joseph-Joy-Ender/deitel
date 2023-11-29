@@ -69,9 +69,29 @@ class DiaryTest {
         diary.unlockDiary("1234");
         diary.createEntry("My diary", "A diary app that makes me remember my past diary");
         diary.createEntry("My second diary", "My favorite diary app");
+
         diary.updateEntry(2, "My sweet diary", "favorite");
         assertEquals("My sweet diary", diary.findEntryById(2).getTitle());
 
+    }
+
+    @Test
+    void testThatEntryCanBeCreatedAgain() {
+        Diary diary = new Diary("JOY", "1234");
+        diary.unlockDiary("1234");
+       Entry entry = diary.createEntries("My diary", "A diary app that makes me remember my past diary");
+       Entry secondEntry = diary.createEntries("My second diary", "My favorite diary app");
+        assertEquals(1, entry.getId());
+        assertEquals(2, secondEntry.getId());
+        assertEquals(2, diary.getTotalNumberOfEntry());
+
+    }
+
+    @Test
+    void testThatExceptionIsThrownIfPasswordIsNotEntered() {
+        Diary diary = new Diary("JOY", "1234");
+        assertThrows(EntryIsLockedException.class, () -> diary.createEntry("Joy", "Body"));
+        assertThrows(EntryIsLockedException.class, () -> diary.createEntries("Joseph", "Joy"));
 
     }
 }

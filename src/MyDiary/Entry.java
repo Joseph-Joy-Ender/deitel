@@ -51,9 +51,10 @@ private LocalDateTime dateTime;
     }
     public String toString() {
         return String.format("""
-                Date  %s
-                Title  %s
-                Body   %s
-                """, date(), title, body);
+                id:  %s
+                date: %s
+                title: %s
+                body: %s
+                """,id, date(), title, body);
     }
 }

@@ -1,6 +1,5 @@
 package MyDiary;
 
-import Banking.Account;
 import Banking.exception.InvalidPinException;
 
 import java.util.ArrayList;
@@ -38,24 +37,35 @@ public class Diary {
     }
 
     public void createEntry(String title, String body) {
-        totalNumberOfEntry++;
-        Entry entry = new Entry(1, title, body);
-        entries.add(entry);
-        entry.setId(totalNumberOfEntry);
-
 //        boolean isUnLocked = !isLocked;
-//        if (isUnLocked){
-//            Entry = new Entry(1, title, body);
-//            entries.add(entry);
-//            totalNumberOfEntry++;
-//            entry.setId(totalNumberOfEntry);
-//        }
+//        if (isUnLocked) {
+           entryIsLocked();
+            totalNumberOfEntry++;
+            Entry entry = new Entry(totalNumberOfEntry, title, body);
+            entries.add(entry);
 
+
+    }
+
+    public Entry createEntries(String title, String body) {
+        entryIsLocked();
+        totalNumberOfEntry++;
+        Entry entry = new Entry(totalNumberOfEntry, title, body);
+        entries.add(entry);
+        return entry;
+
+    }
+
+    private void entryIsLocked() {
+        if (isLocked) throw new EntryIsLockedException("You have to unlock diary first");
     }
 
     public Entry findEntryById(int id)  {
         for (Entry entry: entries) {
-            if (entry.getId() == id) return entry;
+            if(entry.getId() == id) {
+                return entry;
+//                System.out.println(entry);
+            }
 
         }
         return null;
@@ -73,9 +83,7 @@ public class Diary {
     }
 
     public void updateEntry(int id, String title, String body) {
-
         Entry entry = findEntryById(id);
-        entry.setId(id);
         entry.setBody(body);
         entry.setTitle(title);
     }
