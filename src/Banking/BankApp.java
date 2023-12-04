@@ -18,30 +18,43 @@ public class BankApp {
 
     private static void mainMenu() {
         Scanner scanner = new Scanner(System.in);
-        menuMap();
-        String input = scanner.nextLine();
+        try {
+            menuMap();
 
-        switch (input.charAt(0)) {
-            case '1' -> createAccount();
-            case '2' -> deposit();
-            case '3' -> withdraw();
-            case '4' -> transfer();
-            case '5' -> checkBalance();
-            case '6' -> removeAccount();
-            case '7' -> exit();
+            String input = scanner.nextLine();
+
+            switch (input.charAt(0)) {
+                case '1' -> createAccount();
+                case '2' -> deposit();
+                case '3' -> withdraw();
+                case '4' -> transfer();
+                case '5' -> checkBalance();
+                case '6' -> removeAccount();
+                case '7' -> exit();
+            }
+
+        }catch (NumberFormatException exception) {
+            display(exception.getMessage());
+            mainMenu();
+
         }
-
     }
 
     private static void removeAccount() {
         Scanner scanner = new Scanner(System.in);
-        display("Enter your account number: ");
-        String number = scanner.nextLine();
+        try {
 
-        bank.removeAccount(number);
-        bank.print();
-        System.out.println();
-        mainMenu();
+            display("Enter your account number: ");
+            String number = scanner.nextLine();
+
+            bank.removeAccount(number);
+            display(bank.findAccount(number).toString());
+            System.out.println();
+            mainMenu();
+        }catch (NullPointerException | NumberFormatException exception){
+            display(exception.getMessage());
+            removeAccount();
+        }
     }
 
     private static void exit() {
@@ -61,7 +74,7 @@ public class BankApp {
 
             display(String.valueOf(bank.checkBalance(number, Integer.parseInt(pin))));
 
-        }catch (NullPointerException | InvalidPinException nullPointerException){
+        }catch (NullPointerException | InvalidPinException | NumberFormatException nullPointerException){
             display(nullPointerException.getMessage());
             checkBalance();
         }
@@ -88,8 +101,8 @@ public class BankApp {
 
             bank.transfer(Double.parseDouble(amount), sender, receiver, Integer.parseInt(pin));
 
-            bank.print();
-        }catch (InvalidPinException | NullPointerException | InvalidAmount invalidPin){
+            display(bank.findAccount(sender).toString());
+        }catch (InvalidPinException | NullPointerException | InvalidAmount | NumberFormatException invalidPin){
             display(invalidPin.getMessage());
             transfer();
         }
@@ -112,10 +125,10 @@ public class BankApp {
             bank.deposit(Double.parseDouble(amount), number);
 
             display("Your deposit was successful");
+            display(bank.findAccount(number).toString());
 
 
-            bank.print();
-        }catch (InvalidAmount | NumberFormatException invalidAmount){
+        }catch (InvalidAmount | NumberFormatException | NullPointerException invalidAmount){
             display(invalidAmount.getMessage());
             deposit();
         }
@@ -137,10 +150,10 @@ public class BankApp {
             display("Enter your pin: ");
             String pin = scanner.nextLine();
 
-            bank.withdraw(number, Integer.parseInt(pin), Double.parseDouble(amount));
-            bank.print();
+          bank.withdraw(number, Integer.parseInt(pin), Double.parseDouble(amount));
+            display(bank.findAccount(number).toString());
 
-        }catch (InvalidPinException | InsufficientFund | NegativeAmount invalidPin){
+        }catch (InvalidPinException | InsufficientFund | NegativeAmount | NullPointerException | NumberFormatException invalidPin){
             display(invalidPin.getMessage());
             withdraw();
         }
@@ -167,22 +180,30 @@ public class BankApp {
 
     private static void createAccount() {
         Scanner scanner = new Scanner(System.in);
-        display("Enter first name: ");
-        String firstName = scanner.nextLine();
+        try {
 
-        display("Enter last name: ");
-        String lastName = scanner.nextLine();
+            display("Enter first name: ");
+            String firstName = scanner.nextLine();
 
-        display("Enter pin: ");
-        String pin = scanner.nextLine();
+            display("Enter last name: ");
+            String lastName = scanner.nextLine();
 
-        bank.createAccount(firstName, lastName, Integer.parseInt(pin));
+            display("Enter pin: ");
+            String pin = scanner.nextLine();
 
-        display("Account successfully created!!!");
-        System.out.println();
+           Account account = bank.createAccount(firstName, lastName, Integer.parseInt(pin));
 
-        bank.print();
-        mainMenu();
+            display("Account successfully created!!!");
+            System.out.println();
+
+
+            display(account.toString());
+
+            mainMenu();
+        }catch (NumberFormatException numberFormatException){
+            display(numberFormatException.getMessage());
+            createAccount();
+        }
 
     }
 

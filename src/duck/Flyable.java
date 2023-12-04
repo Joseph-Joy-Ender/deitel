@@ -1,2 +1,5 @@
-package duck;public class Flyable {
+package duck;
+
+public interface Flyable {
+    void fly();
 }

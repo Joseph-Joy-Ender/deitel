@@ -1,2 +1,4 @@
-package ticTacToe;public class Game {
+package ticTacToe;
+
+public class Game {
 }

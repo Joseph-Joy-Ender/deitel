@@ -1,5 +1,18 @@
 package ticTacToe;
 
-public enum Constant {
-    X, O, EMPTY
+public enum PositionValue {
+
+    X("X"),
+    O("O"),
+    EMPTY(" ");
+
+    private final String symbol;
+    PositionValue(String symbol){
+        this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
 }

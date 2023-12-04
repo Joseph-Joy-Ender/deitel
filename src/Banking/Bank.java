@@ -59,13 +59,7 @@ public class Bank {
         account2.deposit(amount);
     }
 
-    public void print() {
-        for (Account account: accounts) {
-            System.out.println(account);
 
-        }
-
-    }
 
     public double checkBalance(String number, int pin) {
         Account account = findAccount(number);

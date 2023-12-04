@@ -1,2 +1,5 @@
-package duck;public interface Quackable {
+package duck;
+
+public interface Quackable {
+    void quack();
 }

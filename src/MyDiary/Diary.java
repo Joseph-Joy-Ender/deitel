@@ -37,8 +37,6 @@ public class Diary {
     }
 
     public void createEntry(String title, String body) {
-//        boolean isUnLocked = !isLocked;
-//        if (isUnLocked) {
            entryIsLocked();
             totalNumberOfEntry++;
             Entry entry = new Entry(totalNumberOfEntry, title, body);
@@ -64,7 +62,6 @@ public class Diary {
         for (Entry entry: entries) {
             if(entry.getId() == id) {
                 return entry;
-//                System.out.println(entry);
             }
 
         }
