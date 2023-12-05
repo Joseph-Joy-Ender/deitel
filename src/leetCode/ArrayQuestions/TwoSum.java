@@ -18,8 +18,8 @@ public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum twoSum = new TwoSum();
-        int[] numbers = {2, 7, 11, 15};
-        int target = 9;
+        int[] numbers = {3, 3};
+        int target = 6;
 
         System.out.println(Arrays.toString(twoSum.twoSum(numbers, target)));
 

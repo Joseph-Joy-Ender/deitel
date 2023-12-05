@@ -12,7 +12,7 @@ class TicTacToe {
 
 }
 
-class Board {
+class  Board {
     int count = 0;
     String[] board = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 

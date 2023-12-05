@@ -2,7 +2,7 @@ package leetCode.ArrayQuestions;
 
 import java.util.Arrays;
 
-public class SortingArrayWithAFunction {
+public class  SortingArrayWithAFunction {
 
     public int[] sortArray(int[] nums){
         return Arrays.stream(nums).sorted().toArray();

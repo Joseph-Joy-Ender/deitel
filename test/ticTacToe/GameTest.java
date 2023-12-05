@@ -17,12 +17,18 @@ class GameTest {
     }
 
     @Test
-    public void testThatPlayersCanMakeMove(){
-        Game game = new Game();
-
+    public void testThatPlayerCanSetName(){
         Player player1 = new Player(X);
         Player player2 = new Player(O);
+        player1.setName("Joseph");
+        player2.setName("Qudus");
+        assertEquals("Joseph", player1.getName());
+        assertEquals("Qudus", player2.getName());
+    }
 
+    @Test
+    public void checkThatTheGameCanBeUpdated() {
+        Board board = new Board();
 
     }
 

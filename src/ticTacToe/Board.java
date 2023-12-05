@@ -3,7 +3,7 @@ package ticTacToe;
 import java.util.Arrays;
 
 import static ticTacToe.PositionValue.EMPTY;
-import static ticTacToe.PositionValue.values;
+
 
 public class Board {
     private PositionValue constant;
@@ -35,5 +35,4 @@ public class Board {
     }
 
 
-
-}
+    }
