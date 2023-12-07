@@ -29,6 +29,7 @@ class GameTest {
     @Test
     public void checkThatTheGameCanBeUpdated() {
         Board board = new Board();
+        board.updateBoard();
 
     }
 

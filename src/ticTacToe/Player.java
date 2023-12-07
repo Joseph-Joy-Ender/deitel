@@ -15,4 +15,11 @@ public class Player {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void checkType(){
+        if (positionValue.equals(PositionValue.X)) {
+
+
+        }
+    }
 }

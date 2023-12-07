@@ -35,4 +35,17 @@ public class Board {
     }
 
 
+    boolean updateBoard(int position, String type) {
+        if (boards[position -1][position - 1].equals(" ")){
+            boards[position - 1][position -1] = type;
+            count ++;
+            return true;
+        }
+        else {
+//            System.out.println("Position already selected. select another position");
+            return false;
+        }
     }
+//    public void updateBoard() {
+//    }
+}
