@@ -52,7 +52,7 @@ public class CinemaRoom {
           switch (selectedMenuItem){
               case number_1 -> showSeats(numberOfRows, numberOfSeatInEachRow);
               case number_2 -> buyTicket(totalNumberOfSeat, numberOfRows);
-              case number_3 -> showStatistics(totalNumberOfSeat);
+            //  case number_3 -> showStatistics(totalNumberOfSeat);
               default -> System.out.println("Wrong input");
           }
         }while (selectedMenuItem != 0);

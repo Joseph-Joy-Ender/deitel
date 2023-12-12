@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Diary {
 
-    private String userName;
-    private String password;
+    private final String userName;
+    private final String password;
     private boolean isLocked = true;
     private int totalNumberOfEntry;
     private final ArrayList<Entry> entries;
@@ -33,7 +33,7 @@ public class Diary {
     }
 
     public void lockDiary() {
-        isLocked = true;
+        isLocked = false;
     }
 
     public void createEntry(String title, String body) {

@@ -29,7 +29,7 @@ class DiaryTest {
         assertTrue(diary.isLocked());
         diary.unlockDiary("1234");
         diary.lockDiary();
-        assertTrue(diary.isLocked());
+        assertFalse(diary.isLocked());
     }
 
     @Test

@@ -24,7 +24,7 @@ public class Diaries {
         return null;
     }
 
-    public void delete(String username){
+    public void delete(String username ){
         Diary diary = findByUsername(username);
        diaries.remove(diary);
        size--;
