@@ -6,7 +6,7 @@ public class ReceiptDemo {
     }
 
     private void run() {
-        Receipt receipt = new Receipt( new Printer());
+        Receipt receipt = new Receipt(new Printer());
         receipt.add("Bread", new Money("200", "Naira"));
         receipt.add("Tiger bread", new Money("900", "Naira"));
         receipt.add("Red wine", new Money("1500", "Naira"));

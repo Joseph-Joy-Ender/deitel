@@ -8,7 +8,7 @@ public class FizzBuzz {
 //        System.out.println("Enter a number: ");
 //        int number = input.nextInt();
 
-        for (int number = 1; number <= 50 ; number++) {
+        for (int number = 1; number <= 100 ; number++) {
 
             if ((number % 3 == 0) && (number % 5 == 0)) {
                 System.out.println("FizzBuzz");
