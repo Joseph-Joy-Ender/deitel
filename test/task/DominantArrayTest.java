@@ -11,7 +11,6 @@ public class DominantArrayTest {
     public void testThatAnArrayIsDominant(){
         int[] input = {9, 3, 10, 7, 4};
         int[] result = findDominantElements(input);
-        int[] expected = {10, 7, 4};
-        assertArrayEquals(result, expected);
+        assertArrayEquals(result, new int[]{10, 7, 4});
     }
 }

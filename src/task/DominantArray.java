@@ -12,6 +12,6 @@ public class DominantArray {
             }
 
         }
-        return null;
+        return input;
     }
 }
