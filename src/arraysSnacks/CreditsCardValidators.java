@@ -9,13 +9,9 @@ public class CreditsCardValidators {
        int total = 0;
        for (int i = creditCardNumber.length; i > 0 ; i--) {
            if (i % 2 != 0) {
-
                int result = (Integer.parseInt(String.valueOf(creditCardNumber[i - 1])) * 2);
-               if (result > 9) {
-                   total += (int) addNumbersGreaterThanNine(result);
-               } else {
-                   total += result;
-               }
+               if (result > 9) total += (int) addNumbersGreaterThanNine(result);
+                else total += result;
            }
        }
      return total;
@@ -37,9 +33,7 @@ public class CreditsCardValidators {
  public static long oddlyPLaced(@NotNull char[] creditCardNumber){
        int total = 0;
      for (int i = creditCardNumber.length; i > 0 ; i--) {
-         if (i % 2 == 0){
-             total += Integer.parseInt(String.valueOf(creditCardNumber[i - 1]));
-         }
+         if (i % 2 == 0) total += Integer.parseInt(String.valueOf(creditCardNumber[i - 1]));
      }
      return total;
  }
@@ -57,12 +51,9 @@ public static String additionOfEvenlyPlacedAndOddlyPlaced(long creditCardNumber)
        String number = creditCardNumber + "";
     if (lengthOfCreditCardNumber(creditCardNumber) >= 13 && lengthOfCreditCardNumber(creditCardNumber) <= 16) {
         int addition = (int) (oddlyPLaced(number.toCharArray()) + evenPlaced(number.toCharArray()));
-        if (addition % 10 != 0) {
-            valid = "Invalid Card";
-        }
-    }else {
-        valid = "Invalid Card";
-    }
+        if (addition % 10 != 0) valid = "Invalid Card";
+    }else valid = "Invalid Card";
+
     return valid;
 }
 
