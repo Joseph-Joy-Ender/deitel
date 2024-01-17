@@ -16,7 +16,7 @@ public class ArrayClassExamples {
         return sum;
     }
 
-    public double multiply(@NotNull int[] numbers) {
+    public static double multiply(@NotNull int[] numbers) {
         int product = 1;
         for (int i = ZERO.intValue(); i < numbers.length ; i++) {
             product *= numbers[i];
@@ -56,6 +56,6 @@ public class ArrayClassExamples {
     public static void main(String[] args) {
         int[] numbers = {1,2,3,4,5,6};
         int second = 2;
-        System.out.println(Arrays.toString(swaps(numbers, second)));
+        System.out.println(ArrayClassExamples.multiply(numbers));
     }
 }

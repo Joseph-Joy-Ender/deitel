@@ -6,11 +6,7 @@ public class ComparingStrings {
         String name1 = "Joy Joseph";
         String name2 = "Miracle Joseph";
 
-        if (name1.equals(name2)){
-            System.out.println("The names are the same");
-        }else {
-            System.out.println("The names are not the same");
-        }
+        System.out.println("The names are not the same");
 
         int flag = name1.compareTo(name2);
 
