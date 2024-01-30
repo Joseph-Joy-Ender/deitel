@@ -100,7 +100,6 @@ public class menuDrivenTwoDimensionalArray {
     }
 
     private static void columnWiseSum(int[][] arrayA) {
-        int rows = arrayA.length;
         int cols = arrayA[0].length;
         int sumCol;
         for (int i = 0; i < cols; i++) {
