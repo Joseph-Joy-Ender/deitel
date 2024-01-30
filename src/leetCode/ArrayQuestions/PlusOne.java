@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PlusOne {
     public static void main(String[] args) {
         PlusOne plusOnes = new PlusOne();
-        int[] array = {90};
+        int[] array = {1, 2, 10};
         System.out.println(Arrays.toString(plusOnes.plusOne(array)));
     }
 
@@ -28,17 +28,17 @@ public class PlusOne {
     }
 
     private static String lastDigitPlusOne(int[] digits) {
-        String num = "";
+        StringBuilder num = new StringBuilder();
         String number = String.valueOf(digits[digits.length - 1]);
         for (int count = 0; count < number.length(); count++) {
             if (count == number.length() - 1) {
                 int numb = Integer.parseInt(String.valueOf(number.charAt(count))) + 1;
-                num += numb;
+                num.append(numb);
                 continue;
             }
-            num += String.valueOf(number.charAt(count));
+            num.append(number.charAt(count));
         }
-        return num;
+        return num.toString();
     }
 
 }

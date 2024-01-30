@@ -1,10 +1,9 @@
 package arraysSnacks;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class CreditsCardValidatorsTest {
+public class CreditsCardValidatorsTest {
 
     @Test
     public void testThatEvenlyPlacedIsSummed(){

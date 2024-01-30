@@ -29,7 +29,7 @@ fun main(){
 
     val temp = 18
     val description = when {
-        temp < 0 -> {
+        temp > 2 -> {
             "very cold"
         }
         temp < 10 -> {

@@ -8,6 +8,7 @@ public class RotateImage {
 
        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         rotate(matrix);
+
     }
 
     public static void rotate(int[][] matrix) {

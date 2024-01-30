@@ -1,8 +1,9 @@
 package arraysSnacks;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 class PizzaSnacksTest {
 
@@ -10,7 +11,7 @@ class PizzaSnacksTest {
     void testForTotalSlicesOfPizzaForPeopleTakingLargePizza() {
         int people = 4;
        int expected = PizzaSnacks.totalNumberOfSlicesForSuperHungryPeople(people);
-       assertEquals(16, expected);
+       Assertions.assertEquals(16, expected);
     }
 
     @Test
