@@ -14,6 +14,7 @@ public class CommonDivisor {
             if(number1 % i == 0 && number2 % i == 0){
                 gcd = i;
             }
+
         }
 
         System.out.printf("GCD of %d and %d is: %d", number1, number2, gcd);

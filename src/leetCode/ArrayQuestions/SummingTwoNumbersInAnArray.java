@@ -24,7 +24,7 @@ public class SummingTwoNumbersInAnArray {
         return toArray(result);
     }
 
-    private static int[] toArray(List<Integer> result) {
+    public static int[] toArray(List<Integer> result) {
         int [] toArray = new int[result.size()];
         for(int count = 0 ; count < result.size(); count++){
             toArray[count] = result.get(count);
