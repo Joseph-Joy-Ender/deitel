@@ -17,7 +17,7 @@ public class SortingAnArrayInDescendingOrder {
     }
 
     public static void main(String[] args) {
-        int[] array = {32, 4, 6, 7, 8, 9};
+        int[] array = {10, 7, 8, 7, 8, 5};
         sorted(array);
         for (int i : array) {
             System.out.println(i);
