@@ -197,4 +197,6 @@ public class CheckingOutApp {
         this.billTotal = String.valueOf(subTotal  - discount + vat);
     }
 
+
+
 }
