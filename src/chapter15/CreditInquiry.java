@@ -15,7 +15,7 @@ public class CreditInquiry {
 
         while (accountType != MenuOption.END){
             switch (accountType){
-                case ZERO_BALANCE -> System.out.printf("%nAccounts wit zero balances:%n");
+                case ZERO_BALANCE -> System.out.printf("%nAccounts with zero balances:%n");
                 case CREDIT_BALANCE -> System.out.printf("%nAccounts with credit balances:%n");
                 case DEBIT_BALANCE -> System.out.printf("%nAccounts with debit balances:%n");
             }
@@ -46,12 +46,14 @@ public class CreditInquiry {
         }
     }
 
+
     private static boolean shouldDisplay(MenuOption option, double balance) {
         if ((option == MenuOption.CREDIT_BALANCE) && (balance < 0)) return true;
         else if ((option == MenuOption.DEBIT_BALANCE) && (balance > 0)) {
             return true;
         } else return (option == MenuOption.ZERO_BALANCE) && (balance == 0);
     }
+
 
     private static MenuOption getRequest(Scanner input) {
         int request = 4;

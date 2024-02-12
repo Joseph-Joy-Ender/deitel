@@ -21,8 +21,10 @@ public class CreateTextFile {
                 System.out.print("? ");
             }
         }
+
         catch (SecurityException | FileNotFoundException | FormatterClosedException exception){
             exception.printStackTrace();
+
         }
     }
 }
