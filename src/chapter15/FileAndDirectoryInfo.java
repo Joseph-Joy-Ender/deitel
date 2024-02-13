@@ -23,6 +23,7 @@ public class FileAndDirectoryInfo {
             System.out.printf("Size: %s%n", Files.size(path));
             System.out.printf("Path: %s%n", path);
             System.out.printf("Absolute path: %s%n", path.toAbsolutePath());
+            System.out.printf("Owner: %s%n", Files.getOwner(path));
             if (Files.isDirectory(path)){
                 System.out.printf("%nDirectory contents:%n");
 
