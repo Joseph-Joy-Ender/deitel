@@ -8,7 +8,6 @@ public class AirConditioner1 {
 
     public void isOn() {
         isOn = true;
-       // System.out.println("It is on");
     }
 
     public boolean getIsOn() {
@@ -21,7 +20,6 @@ public class AirConditioner1 {
 
     public void isOff() {
         isOff = false;
-       // System.out.println("It is off");
     }
 
 
@@ -34,9 +32,10 @@ public class AirConditioner1 {
     }
 
     public int decreasedTemperature() {
-        if (initialTemperature < 16) ;
-        initialTemperature = 16;
-        return 15;
+        if (initialTemperature <= 16) initialTemperature -= 1;
+
+
+        return initialTemperature - 1;
     }
 
     public int beyond30() {

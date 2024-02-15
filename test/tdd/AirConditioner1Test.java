@@ -52,6 +52,7 @@ class AirConditioner1Test {
         int temperatures = airConditioner1.decreasedTemperature();
         //check
         assertEquals(temperatures, 15);
+        assertEquals(airConditioner1.decreasedTemperature(), 14);
     }
 
     @Test
