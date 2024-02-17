@@ -7,11 +7,11 @@ public class FileInputStreams {
 
     public static void main(String[] args) {
         try (FileInputStream fileInputStream =
-                     new FileInputStream("C:\\Users\\Joy-PC\\IdeaProjects\\deitel\\src\\chapter15\\inputOutputStreams\\example.txt")){
-           byte[] fileBytes = fileInputStream.readNBytes(16);
+                     new FileInputStream("C:\\Users\\Joy-PC\\IdeaProjects\\deitel\\src\\chapter15\\byteBasedIO\\inputOutputStreams\\example.txt")){
+           byte[] fileBytes = fileInputStream.readNBytes(3);
             System.out.println(new String(fileBytes));
 
-            fileInputStream.skip(-16);
+           // fileInputStream.skip(-16);
             byte[] bytes = fileInputStream.readAllBytes();
             System.out.println(new String(bytes));
 
