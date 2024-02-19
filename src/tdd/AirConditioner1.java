@@ -3,7 +3,7 @@ package tdd;
 public class AirConditioner1 {
     boolean isOn = false;
     boolean isOff = false;
-    public int initialTemperature = 16;
+    public int initialTemperature = 21;
 
 
     public void isOn() {
@@ -28,21 +28,18 @@ public class AirConditioner1 {
     }
 
     public int increaseTemperature() {
-        return initialTemperature + 1;
+        return initialTemperature += 1;
     }
 
     public int decreasedTemperature() {
-        if (initialTemperature <= 16) initialTemperature -= 1;
-
-
-        return initialTemperature - 1;
+        return initialTemperature -= 1;
     }
 
-    public int beyond30() {
-        int result = 30;
-        if (initialTemperature > 30)
-            System.out.print("Temperature is still 30");
-        return result;
+    public String beyond30() {
+        if (initialTemperature >= 30){
+            initialTemperature = 30;
+        }
+            return "Temperature is still 30";
     }
 
     public int below16() {

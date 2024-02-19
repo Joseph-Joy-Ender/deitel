@@ -36,39 +36,51 @@ class AirConditioner1Test {
     }
     @Test
     void increasedTemperature(){
-        // given
-        airConditioner1.increaseTemperature();
         // when
         int temperature = airConditioner1.increaseTemperature();
         //assert
-        assertEquals( temperature, 17);
+        assertEquals(temperature, 22);
+        assertEquals(airConditioner1.increaseTemperature(), 23);
+        assertEquals(airConditioner1.decreasedTemperature(), 22);
     }
 
     @Test
     void decreaseTemperature(){
-        // given
-        airConditioner1.decreasedTemperature();
+        assertEquals(21, airConditioner1.getTemperature());
         // when
         int temperatures = airConditioner1.decreasedTemperature();
         //check
-        assertEquals(temperatures, 15);
-        assertEquals(airConditioner1.decreasedTemperature(), 14);
+        assertEquals(temperatures, 20);
+        assertEquals(airConditioner1.decreasedTemperature(), 19);
     }
 
     @Test
     void temperatureBeyond30(){
-        //given
-        airConditioner1.beyond30();
-        // when
-        int temperatureBeyond30 = airConditioner1.beyond30();
+        assertEquals(21, airConditioner1.getTemperature());
         //assert
-        assertEquals(temperatureBeyond30, 30);
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        airConditioner1.increaseTemperature();
+        String temperatureBeyond30 = airConditioner1.beyond30();
+        assertEquals(temperatureBeyond30, "Temperature is still 30");
     }
 
     @Test
     void temperatureBelow16(){
-        // given
-        airConditioner1.below16();
+        assertEquals(21, airConditioner1.getTemperature());
+        airConditioner1.decreasedTemperature();
+        airConditioner1.decreasedTemperature();
+        airConditioner1.decreasedTemperature();
+        airConditioner1.decreasedTemperature();
+        airConditioner1.decreasedTemperature();
+        airConditioner1.decreasedTemperature();
         // when
         int temperatureBelow16 = airConditioner1.below16();
         //check
