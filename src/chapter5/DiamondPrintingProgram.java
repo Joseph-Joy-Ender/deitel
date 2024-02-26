@@ -3,8 +3,8 @@ package chapter5;
 public class DiamondPrintingProgram {
     public static void main(String[] args) {
         shape1();
-//        shape2();
-//        shape3();
+        shape2();
+        shape3();
     }
     private static void shape1(){
         for (int i = 1; i <= 5; i++) {
@@ -12,7 +12,7 @@ public class DiamondPrintingProgram {
                 System.out.print(" ");
             }
             for (int j = 0; j < i; j++) {
-                System.out.print(" * ");
+                System.out.print("* ");
             }
             System.out.println();
 
@@ -21,7 +21,7 @@ public class DiamondPrintingProgram {
     }
     private static void shape2(){
         for (int i = 0; i < 6; i++) {
-            System.out.print(" * ");
+            System.out.print("* ");
 
         }
         System.out.println();
@@ -32,7 +32,7 @@ public class DiamondPrintingProgram {
                 System.out.print(" ");
             }
             for (int j = i; j > 0 ; j--) {
-                System.out.print(" * ");
+                System.out.print("* ");
 
             }
             System.out.println();

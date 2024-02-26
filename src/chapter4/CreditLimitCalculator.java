@@ -48,7 +48,8 @@ public class CreditLimitCalculator {
     }
 
     public int calculateNewBalance(){
-        int newBalance = getBeginningBalance() + getTotalItems() - getTotalOfCredits();
+        int newBalance = getBeginningBalance() + getTotalItems()
+                - getTotalOfCredits();
         displayMessage(newBalance);
         return newBalance;
     }

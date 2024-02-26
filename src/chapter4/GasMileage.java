@@ -13,7 +13,7 @@ public class GasMileage {
         double totalMilesPerGallon = 0;
 
         double milesPerGallon = (double) miles / gallons;
-        System.out.printf("%.5f%n", milesPerGallon);
+        System.out.println(milesPerGallon);
 
         totalMilesPerGallon += milesPerGallon;
 

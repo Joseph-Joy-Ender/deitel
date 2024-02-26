@@ -41,16 +41,19 @@ public class BarChartPrintingProgram {
 
 
 //        int count = 0;
-//
+////
+//        int number = 0;
 //        for (int i = 1; i <= 5 ; i++) {
+//            Scanner scanner = new Scanner(System.in);
 //            System.out.println("Enter five numbers between 1 and 30:");
-//            int number = scanner.nextInt();
-//            for (int j = 1; j <= number ; j++) {
-//                System.out.print("* ");
-//            }
-//            System.out.println();
+//           number = scanner.nextInt();
 //        }
+//
+//        for (int j = 1; j <= number ; j++) {
+//            System.out.print("* ");
+//        }
+//        System.out.println();
 //        System.out.println(count);
-//    }
     }
+
 }
