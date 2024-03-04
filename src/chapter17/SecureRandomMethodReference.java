@@ -11,7 +11,8 @@ public class SecureRandomMethodReference {
 
         String numbers = secureRandom.ints(10, 1, 7)
                 .mapToObj(String::valueOf)
-                .collect(Collectors.joining("-"));
+                .collect(Collectors.joining("-", "[", "]"));
+//                .collect(Collectors.joining("-"));
 
         System.out.printf("Random numbers on one line %s%n ", numbers);
     }
