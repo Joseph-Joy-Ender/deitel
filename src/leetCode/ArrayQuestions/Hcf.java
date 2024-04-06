@@ -39,12 +39,12 @@ public class Hcf {
 
     public static void main(String[] args) {
 
-        String[] cars = {"volvo", "Mercedes", "Bmw"};
-        for(String i : cars){
-            System.out.println(i);
-        }
+//        String[] cars = {"volvo", "Mercedes", "Bmw"};
+//        for(String i : cars){
+//            System.out.println(i);
+//        }
         
-//        int[] numbers = {6, 3, 9};
-//        System.out.println(Arrays.toString(highestFactor(numbers)));
+        int[] numbers = {8,16,12};
+        System.out.println(Arrays.toString(highestFactor(numbers)));
     }
 }
