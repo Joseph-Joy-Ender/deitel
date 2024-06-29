@@ -129,9 +129,9 @@ ArrayList<String> answers = new ArrayList<>();
     public void personalityTypeResult(String type){
         switch (type) {
             case "INFP" -> System.out.println("""
-                    
+                   \s
                     MEDIATOR
-                                        
+                                       \s
                     A Mediator (INFP) is someone who possesses the Introverted, Intuitive, Feeling, and Prospecting personality traits.
                     These rare personality types tend to be quiet, open-minded, and imaginative, and they apply a caring and creative approach to everything they do.
                     Although they may seem quiet or unassuming, Mediators (INFPs) have vibrant, passionate inner lives. Creative and imaginative,
@@ -143,24 +143,24 @@ ArrayList<String> answers = new ArrayList<>();
                     * Generous – Mediators rarely enjoy succeeding at other people’s expense.
                     They feel called to share the good things in their lives, give credit where it’s due, and uplift the people around them.
                     These personalities want to contribute to a world where every voice is heard and no one’s needs go unmet.
-                                        
+                                       \s
                     * Passionate – When an idea or movement captures their imagination, Mediators want to give their whole heart to it.
                     People with this personality type may not always be outspoken,\s
                     but that doesn’t diminish their strong feelings for a cause that speaks to their beliefs and convictions.
-                    
+                   \s
                      WEAKNESSES\s
                     * Unrealistic – Nothing in this world is perfect – and that can be a difficult truth for Mediators to accept.
                     People with this personality type can be hopeless romantics, with rose-colored visions of what their lives should be like.
                     This can set Mediators up for disappointment when reality inevitably falls short of their dreams.
-                      
+                     \s
                     * Self-Isolating – Mediators long to connect with others, but they don’t always know how.
                     Especially in new environments, Mediators may be reluctant to put themselves out there in ways that would help them make new friends or become involved in a new community.
                     As a result, people with this personality type may sometimes feel lonely or isolated.
-                      
+                     \s
                     * Desperate to Please – Conflict tends to be stressful for Mediators, who yearn for harmony and acceptance.
                     When someone dislikes or disapproves of them, these personalities may become fixated on trying to clear the air and change that person’s mind.
                     Unfortunately, Mediators’ desire to please others can drain their energy, eclipsing their inner wisdom and their awareness of their own needs.
-                    
+                   \s
                         ROMANTIC RELATIONSHIPS
                     Mediators (INFPs) are dreamers and idealists, especially when it comes to romance.
                     People with this personality type believe in the power and beauty of true love, and they sincerely hope never to settle for anything less.
@@ -171,18 +171,18 @@ ArrayList<String> answers = new ArrayList<>();
                     Mediators don’t just want to find a partner – they want to connect with a soul mate.
                     Thoughtful and open-minded, these personalities are generally willing to consider going out with all sorts of people.
                     Mediators pride themselves on their ability to look past a potential partner’s superficial traits – such as appearance, social status, or possessions – and focus on deeper, more meaningful signals of compatibility.
-                       
+                      \s
                        FRIENDSHIPS               \s
                     When it comes to their social lives, Mediators (INFPs) may find themselves caught in a web of contradictions.
                     People with this personality type crave alone time, but they’re also vulnerable to loneliness.
                     They long to feel accepted and well-liked, but they hate the idea of pretending to be anyone but their authentic selves.
                     And while they hesitate to draw attention to themselves, they don’t want to be invisible, either.
-                                        
+                                       \s
                       CAREER PATHS
                     Many Mediators (INFPs) long for a career that doesn’t just take care of the bills but also feels fulfilling.
                     They want to spend their days doing something they genuinely love, preferably without too much stress or drama.
-                                                         
-                    """);
+                                                        \s
+                   \s""");
             case "INTJ" -> System.out.println("""
                                  ARCHITECT
                     An Architect (INTJ) is a person with the Introverted, Intuitive, Thinking, and Judging personality traits.

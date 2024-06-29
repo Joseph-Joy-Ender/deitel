@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Bank {
     private int totalNumberOfAccounts;
       ArrayList<Account> accounts;
+
     public Bank(String bankName) {
         accounts = new ArrayList<>();
     }
@@ -15,8 +16,8 @@ public class Bank {
         totalNumberOfAccounts++;
         String accountName = generateAccountName(firstName, lastName);
         String accountNumber = generateAccountNumber();
-       Account account =  new Account(accountName, accountNumber, pin);
-       accounts.add(account);
+        Account account =  new Account(accountName, accountNumber, pin);
+        accounts.add(account);
        return account;
 
     }
@@ -59,8 +60,6 @@ public class Bank {
         account2.deposit(amount);
     }
 
-
-
     public double checkBalance(String number, int pin) {
         Account account = findAccount(number);
        return account.checkBalance(pin);
@@ -69,6 +68,7 @@ public class Bank {
 
     public void removeAccount(String number){
         accounts.removeIf(account -> account.accountNumber().equals(number));
+
     }
 
 

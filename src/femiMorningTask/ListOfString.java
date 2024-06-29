@@ -6,6 +6,7 @@ public class ListOfString {
     public static void main(String[] args) {
       ListOfString listOfString = new ListOfString();
       listOfString.countCharacter();
+
     }
 
     public void countCharacter(){

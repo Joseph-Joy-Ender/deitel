@@ -11,6 +11,7 @@ public class Account {
     private final int pin;
     private final String number;
     private final String name;
+
     public Account(String accountName, String accountNumber, int pin) {
         this.pin = pin;
         number = accountNumber;
