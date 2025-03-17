@@ -8,7 +8,7 @@ public class MultiplicationTable2 {
 
         int num = 2;
 
-        for (int count = 1; count <= 12 ; count++) {
+        for (int count = 1; count <= 10 ; count++) {
             System.out.printf("%d * %d = %d \n ", num, count, num * count);
         }
     }
